@@ -5,7 +5,7 @@ import ceb from "../img/CEB.png";
 import due from "../img/due.png";
 import paid from "../img/paid.png";
 import ExpenseModal from "./Modal/ExpenseModal";
-const Expense = () => {
+const Expense = ({ setVisible }) => {
   return (
     <div className="scrollable-container">
       <div>
@@ -137,10 +137,10 @@ const Expense = () => {
       </div>
 
       <div class="addbutton">
-        {/* <button class="circle-button">
+        <button class="circle-button" onClick={() => setVisible(true)}>
           <i class="fas fa-plus"></i>
-        </button> */}
-        <ExpenseModal />
+        </button>
+        {/* <ExpenseModal /> */}
       </div>
     </div>
   );

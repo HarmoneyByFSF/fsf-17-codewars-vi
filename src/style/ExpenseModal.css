@@ -196,3 +196,16 @@ body {
     margin-bottom: 10px;
     margin-top: 5px;
 }
+
+.popup-content label {
+
+    padding: 0px;
+    margin: 5px;
+}
+
+.popup-content input {
+
+    /* padding: 0px; */
+    margin: 0px;
+    margin-top: -25px;
+}
