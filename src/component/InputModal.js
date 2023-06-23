@@ -1,26 +1,48 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../style/InputModal.css";
 import successSound from "../music/treasure.mp3";
 
 const InputModal = () => {
   const [openSuccess, setOpenSuccess] = useState(false);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("items"));
+    if (items) {
+      setItems(items);
+    }
+  }, []);
+
+  console.log(items);
 
   const audio = new Audio(successSound);
   audio.loop = false;
 
-  //   function showPopup() {
-  //     var popup = document.getElementById("popup-container");
-  //     popup.style.display = "flex";
-  //   }
+  function saveDataToLocalStorage() {
+    const existingData = JSON.parse(localStorage.getItem("Expenses"));
 
-  //   function hidePopup() {
-  //     var popup = document.getElementById("popup-container");
-  //     popup.style.display = "none";
-  //   }
+    console.log(Array.isArray(existingData));
 
-  //   const audio = new Audio();
-  //   audio.src = "";
-  // const button = document.querySelector(".buttonContinue");
+    const data = {
+      Title: title,
+      description: description,
+      amount: amount,
+    };
+    existingData.push(data);
+
+    localStorage.setItem("Expenses", JSON.stringify(existingData));
+    setOpenSuccess(false);
+  }
+
+  function retrieveAllDataFromLocalStorage() {
+    const existingData = JSON.parse(localStorage.getItem("Expenses"));
+
+    console.log(Array.isArray(existingData));
+  }
 
   //   button.addEventListener("click", (e) => {
   //     e.preventDefault();
@@ -53,7 +75,9 @@ const InputModal = () => {
             class="expense-textfield"
             type=""
             id="text1"
+            value={title}
             placeholder="Enter bill title"
+            onChange={(e) => setTitle(e.target.value)}
           />
           <br />
 
@@ -63,7 +87,9 @@ const InputModal = () => {
             class="expense-textfield"
             type="text"
             id="text2"
+            value={description}
             placeholder="Enter bill description"
+            onChange={(e) => setDescription(e.target.value)}
           />
           <br />
 
@@ -73,13 +99,17 @@ const InputModal = () => {
             class="expense-textfield"
             type="text"
             id="text3"
+            value={amount}
             placeholder="Enter bill amount"
+            onChange={(e) => setAmount(e.target.value)}
           />
           <br />
 
           <button
             class="buttonContinue"
             onClick={() => {
+              saveDataToLocalStorage();
+              retrieveAllDataFromLocalStorage();
               audio.loop = false;
               audio.play();
             }}

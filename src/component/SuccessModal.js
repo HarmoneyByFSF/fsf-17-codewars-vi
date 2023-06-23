@@ -1,48 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import successSound from "../music/treasure.mp3";
 import target from "../img/target.png";
 import coin from "../img/dollar_coin.png";
+import Confetti from "react-confetti";
 
 const SuccessModal = () => {
   const [openSuccess, setOpenSuccess] = useState(false);
 
   const audio = new Audio(successSound);
   audio.loop = false;
-  // const audio = new Audio();
-  // audio.src = "css/sound/treasure.mp3";
-  // const button = document.querySelector(".buttonContinue");
-
-  // button.addEventListener("click", (e) => {
-  //   e.preventDefault();
-  //   button.classList.add("animate");
-  //   setTimeout(() => {
-  //     button.classList.remove("animate");
-  //   }, 600);
-  // });
-
-  // function showPopup() {
-  //     var popup = document.getElementById('popup-container');
-  //     popup.style.display = 'flex';
-  //     confetti.start();
-  //   }
-
-  //   function hidePopup() {
-  //     var popup = document.getElementById('popup-container');
-  //     popup.style.display = 'none';
-  //     confetti.stop();
-  //   }
+  const { width, height } = 2030;
 
   return (
     <div>
-      <script src="js\confetti.js"></script>
-
-      <button onClick={() => setOpenSuccess(true)}>Show Pop-up</button>
+      <button
+        onClick={() => {
+          audio.loop = false;
+          audio.play();
+          setOpenSuccess(true);
+        }}
+      >
+        Show Pop-up
+      </button>
 
       <div
         id="popup-container"
         class="popup-container"
         style={{ display: openSuccess ? "flex" : "none" }}
       >
+        <Confetti width={width} height={height} />
+
         <div class="popup-content">
           <div class="close-button" onClick={() => setOpenSuccess(false)}>
             &#x2716;
@@ -64,8 +51,6 @@ const SuccessModal = () => {
           <button
             class="buttonContinue"
             onClick={() => {
-              audio.loop = false;
-              audio.play();
               setOpenSuccess(false);
             }}
           >
