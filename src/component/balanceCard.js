@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import balanceCardBackground from "../img/balanceCard.png";
 import editBtn from "../img/edit.png";
 import "../style/investmentpage.css";
 import BalanceInputModal from "./Modal/balanceInputModal";
 
 const BalanceCard = () => {
+  const [balance, setBalance] = useState("");
+  const [income, setIncome] = useState("");
+  const [expense, setExpense] = useState("");
+  const [count, setCount] = useState(0);
+
+  // const update = () => {
+  //   setCount(count++)
+  // }
+
+  useEffect(() => {
+    console.log("rerere");
+    const card = JSON.parse(localStorage.getItem("Balance"));
+    if (card) {
+      setBalance(formatNumberWithCommas(card.balance));
+      setIncome(formatNumberWithCommas(card.income));
+      setExpense(formatNumberWithCommas(card.expense));
+    }
+  }, [count]);
+
   function formatNumberWithCommas(number) {
     // Convert the number to a string
     const numberString = number.toString();
@@ -41,9 +60,9 @@ const BalanceCard = () => {
     return formattedNumber;
   }
 
-  const balance = formatNumberWithCommas("34505.00");
-  const income = formatNumberWithCommas("25550.00");
-  const expense = formatNumberWithCommas("8545.00");
+  // const balance = formatNumberWithCommas("34505.00");
+  // const income = formatNumberWithCommas("25550.00");
+  // const expense = formatNumberWithCommas("8545.00");
 
   return (
     <div id="cardContainer" class="position-relative animated zoomIn">
@@ -58,7 +77,7 @@ const BalanceCard = () => {
       </div>
       <div class="image-top-right">
         {/* <img src={editBtn} alt="Edit" /> */}
-        <BalanceInputModal />
+        <BalanceInputModal setCount={setCount} count={count} />
       </div>
       <div class="bottom-right">
         <p id="expenseLabel">Expenses</p>
