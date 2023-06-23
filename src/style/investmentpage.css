@@ -1,0 +1,159 @@
+/* Container holding the image and the text */
+
+
+.bottom-left {
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.center-bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background-color: white;
+}
+
+.top-left {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.image-top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.image-top-right img {
+    height: 30px;
+    width: 30px;
+}
+
+.bottom-right {
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#incomeLabel,
+#expenseLabel,
+#bottomLeft,
+#topLeft,
+#topRight,
+#bottomRight,
+#centered {
+    font-family: Poppins;
+    font-size: 18px;
+    color: white;
+}
+
+#centered {
+    font-size: 35px;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-stock{
+    width: 100%;
+    padding: 3px;
+}
+
+.stock-container {
+    position: relative;
+    background-color: #e8e7e7;
+    border-radius: 35px;
+    padding: 10px;
+}
+
+.stock-row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.stock-image {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    margin-right: auto;
+}
+
+.stock-price {
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.stock-lock-container {
+    position: relative;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+    border-radius: 35px;
+}
+
+.stock-lock-container.locked .overlay {
+    display: block;
+}
+
+.lock-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.lock-image {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}

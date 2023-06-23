@@ -1,7 +1,7 @@
 import React from "react";
 import balanceCardBackground from "../img/balanceCard.png";
 import editBtn from "../img/edit.png";
-import "../style/balanceCard.css";
+import "../style/investmentpage.css";
 
 const BalanceCard = () => {
   //   var textValues = ["Rs 34,505.79", "Rs 8,575.00", "Rs 25,000.00"];

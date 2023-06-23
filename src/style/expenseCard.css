@@ -1,84 +1,110 @@
 body {
-    background-color: #888888;
-    margin: 0;
-  }
-  
+  background-color: #888888;
+  margin: 0;
+}
 
-        .scrollable-container {
-          overflow-y: auto;
-          max-height: 300px;
-          padding: 20px;
-        }
-        
-        .scrollable-container::-webkit-scrollbar {
-          width: 8px;
-        }
-        
-        .scrollable-container::-webkit-scrollbar-thumb {
-          background-color: #8D64FF;
-        }
-        
-        .scrollable-container::-webkit-scrollbar-track {
-          background-color: transparent;
-        }
-  
-  .expense-container {
-    background-color: #ffffff;
-    border-radius: 35px;
-    padding: 20px;
-    width: 400px;
-  }
-  
-  .expense-row1 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    padding-top: 20px;
-  }
-  
-  .expense-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .expense-title {
-    font-size: 15px;
-    flex-grow: 1;
-  }
-  
-  .expense-image {
-    width: 60px;
-    height: 20px;
-    object-fit: cover;
-    margin-left: auto;
-  }
-  
-  .expense-description {
-    font-size: 16px;
-    color: #888888;
-  }
-  
-  .expense-due-date {
-    font-size: 16px;
-    color: #888888;
-    margin-right: auto;
-  }
-  
-  .expense-alarm {
-    font-size: 16px;
-    color: #888888;
-    margin-right: auto;
-  }
-  
-  .notification-icon {
-    width: 50px;
-    height: 20px;
-    margin-right: 5px;
-  }
-  
-  .expense-price {
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: auto;
-  }
+
+.scrollable-container {
+  overflow-y: auto;
+  max-height: 300px;
+  padding: 20px;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #8D64FF;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.expense-container {
+  background-color: #ffffff;
+  border-radius: 35px;
+  padding: 20px;
+  width: 400px;
+}
+
+.expense-row1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.expense-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.expense-title {
+  font-size: 15px;
+  flex-grow: 1;
+}
+
+.expense-image {
+  width: 60px;
+  height: 20px;
+  object-fit: cover;
+  margin-left: auto;
+}
+
+.expense-description {
+  font-size: 16px;
+  color: #888888;
+}
+
+.expense-due-date {
+  font-size: 16px;
+  color: #888888;
+  margin-right: auto;
+}
+
+.expense-alarm {
+  font-size: 16px;
+  color: #888888;
+  margin-right: auto;
+}
+
+.notification-icon {
+  width: 50px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.expense-price {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.addbutton{
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #8D64FF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle-button i {
+  color: white;
+}
+
+.circle-button:hover {
+  opacity: 0.8;
+}
