@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-// import "../../style/ExpenseModal.css";
+import "../../style/ExpenseModal.css";
 import successSound from "../../music/treasure.mp3";
 
-const ExpenseModal = () => {
+const ExpenseModal = ({ visible, setVisible }) => {
   const [openSuccess, setOpenSuccess] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -54,23 +54,25 @@ const ExpenseModal = () => {
   return (
     <div>
       {/* <button onClick={() => setOpenSuccess(true)}>Show Pop-up</button> */}
-      <button class="circle-button" onClick={() => setOpenSuccess(true)}>
+      {/* <button class="circle-button" onClick={() => setOpenSuccess(true)}>
         <i class="fas fa-plus"></i>
-      </button>
+      </button> */}
       <div
         id="popup-containerM"
         class="popup-containerM"
-        style={{ display: openSuccess ? "flex" : "none" }}
+        style={{ display: visible ? "flex" : "none" }}
       >
         <div class="popup-content">
-          <div class="close-button" onClick={() => setOpenSuccess(false)}>
+          <div class="close-button" onClick={() => setVisible(false)}>
             &#x2716;
           </div>
           <h2 class="popup-title" style={{ color: "#484848" }}>
             Add Expenses
           </h2>
 
-          <label class="popup-subtitle">Title</label>
+          <label class="popup-subtitle" style={{ paddingBottom: "-20px" }}>
+            Title
+          </label>
           <br />
           <input
             class="expense-textfield"
@@ -111,6 +113,7 @@ const ExpenseModal = () => {
             onClick={() => {
               saveDataToLocalStorage();
               retrieveAllDataFromLocalStorage();
+              setVisible(false);
               audio.loop = false;
               audio.play();
             }}
