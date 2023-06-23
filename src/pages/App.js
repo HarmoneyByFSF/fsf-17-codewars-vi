@@ -40,8 +40,6 @@ function App() {
 
   return (
     <div>
-      <br></br>
-      <br></br>
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
