@@ -70,7 +70,9 @@
     /* Center vertically */
     letter-spacing: 8%;
     /* Add the letter spacing */
+    cursor: pointer;
 }
+
 
 .column-configuration {
     display: flex;

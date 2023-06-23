@@ -40,8 +40,7 @@
 #bottomLeft,
 #topLeft,
 #topRight,
-#bottomRight,
-#centered {
+#bottomRight{
     font-family: Poppins;
     font-size: 18px;
     color: white;

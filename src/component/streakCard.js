@@ -4,6 +4,7 @@ import coin from "../img/dollar_coin.png";
 import tick from "../img/tick.png";
 import streak_person from "../img/streak_person.png";
 import streakBack from "../img/streakBack.png";
+import Redeem from "./Modal/Redeem";
 
 const StreakCard = () => {
   return (
@@ -17,7 +18,8 @@ const StreakCard = () => {
             <p>Way to go!</p>
           </div>
         </div>
-        <div class="button">Redeem</div>
+        <Redeem />
+        {/* <div class="button">Redeem</div> */}
         <div class="column-configuration">
           <div clas="streak-days">
             <p>T</p>

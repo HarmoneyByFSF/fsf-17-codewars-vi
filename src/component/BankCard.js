@@ -3,6 +3,8 @@ import "../style/bankCard.css";
 import visa from "../img/visa_card.png";
 import edit from "../img/edit_card.png";
 const BankCard = () => {
+
+  
   return (
   
   <div class="overall">
@@ -27,9 +29,9 @@ const BankCard = () => {
         <img class="img-fluid" src={visa} alt=""/>
         <div class="bottom-left-visa">
           <p id="cardNumber">CARD NUMBER</p>
-          <p id="lockedCardNumber">2352385</p>
+          <p id="lockedCardNumber">1412 4143 5328 2393 1247</p>
           <p id="validity">VALID THRU</p>
-          <p id="date">date</p>
+          <p id="date">04/24</p>
           
         </div>
      
