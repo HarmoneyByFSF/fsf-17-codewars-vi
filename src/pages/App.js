@@ -1,8 +1,8 @@
-import "./App.css";
+import "../style/App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ margin: 0, padding: 0 }}>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
