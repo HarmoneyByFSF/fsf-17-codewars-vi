@@ -4,6 +4,7 @@ import prt from "../img/card1.png";
 import streak from "../img/streak.png";
 import skill from "../img/skill.png";
 import visa from "../img/visa.png";
+import BalanceCard from "../component/balanceCard";
 
 const Dashboard = () => {
   return (
@@ -11,6 +12,7 @@ const Dashboard = () => {
       <div class="angry-grid">
         <div id="item-0">
           {/* <img src={prt} style={{ width: "100%", borderRadius: "20px" }} /> */}
+          <BalanceCard />
         </div>
         <div id="item-1">
           {/* <img src={streak} style={{ width: "100%", borderRadius: "20px" }} /> */}

@@ -1,0 +1,94 @@
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    padding-bottom: 2vw;
+    padding-left: 6vw;
+}
+
+.center-bottom {
+    position: absolute;
+    bottom: 3.6vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.2vw;
+    height: 5vw;
+    background-color: white;
+}
+
+.top-left {
+    padding-top: 2vw;
+    padding-left: 6vw;
+}
+
+.image-top-right {
+    position: absolute;
+    top: 2vw;
+    right: 6vw;
+}
+
+.image-top-right img {
+    height: 3vw;
+    width: 3vw;
+}
+
+.bottom-right {
+    padding-bottom: 2vw;
+    padding-right: 6vw;
+}
+
+#incomeLabel,
+#expenseLabel,
+#bottomLeft,
+#topLeft,
+#topRight,
+#bottomRight,
+#centered {
+    font-family: Poppins;
+    font-size: 1.5vw;
+    color: white;
+}
+
+#centered {
+    font-size: 2.5vw;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 0.8vw;
+    left: 1.6vw;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 0.8vw;
+    left: 1.6vw;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 0.8vw;
+    right: 1.6vw;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 0.8vw;
+    right: 1.6vw;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
