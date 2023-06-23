@@ -2,6 +2,7 @@ import React from "react";
 import balanceCardBackground from "../img/balanceCard.png";
 import editBtn from "../img/edit.png";
 import "../style/investmentpage.css";
+import BalanceInputModal from "./Modal/balanceInputModal";
 
 const BalanceCard = () => {
   function formatNumberWithCommas(number) {
@@ -56,7 +57,8 @@ const BalanceCard = () => {
         <p id="topLeft">Balance</p>
       </div>
       <div class="image-top-right">
-        <img src={editBtn} alt="Edit" />
+        {/* <img src={editBtn} alt="Edit" /> */}
+        <BalanceInputModal />
       </div>
       <div class="bottom-right">
         <p id="expenseLabel">Expenses</p>
