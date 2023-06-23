@@ -16,6 +16,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import fsc from "../img/fsc.png";
+import user from "../img/user.png";
+import coin_count from "../img/coin_count.png";
+
 
 function App() {
   const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -40,30 +44,36 @@ function App() {
 
   return (
     <div>
-      <br></br>
-      <br></br>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: '#C1ADFA', height: '60px' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              DigiExpense
-            </Typography>
-
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <img src={fsc} alt="FSC Logo" style={{ marginRight: '8px', paddingBottom: '2px' }} />
+              
+              <Typography
+                
+                noWrap
+                href="/"
+                sx={{
+                  mr: 2,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '100%',
+                  fontFamily: 'poppins',
+                  fontWeight: 400,
+                  fontSize: 30,
+                
+                  paddingLeft: 2,
+                  letterSpacing: '8%',
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  textDecorationLine: 'none', // Add this line to remove underline
+                }}
+              >
+                Hi, Rabill
+              </Typography>
+            </Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -116,36 +126,43 @@ function App() {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             </Box>
-
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
+  <Tooltip title="Open settings">
+    {/* Replace the IconButton with three FSC images */}
+    
+    <div style={{ position: 'relative', display: 'inline-block' }}>
+  <img src={coin_count} alt="coin count" style={{ marginRight: '15px', paddingTop:'1px' }} />
+  <div style={{ position: 'absolute', top: '60%', left: '55%', transform: 'translate(-50%, -50%)' }}>
+    <p style={{ color: 'white', fontSize: '15px', fontWeight: 'bold' }}>34</p>
+  </div>
+</div>
+
+    <img src={user} alt="user Logo" style={{ marginRight: '5px', paddingTop:'1px' }} />
+  </Tooltip>
+  <Menu
+    sx={{ mt: '45px' }}
+    id="menu-appbar"
+    anchorEl={anchorElUser}
+    anchorOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    keepMounted
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'right',
+    }}
+    open={Boolean(anchorElUser)}
+    onClose={handleCloseUserMenu}
+  >
+    {settings.map((setting) => (
+      <MenuItem key={setting} onClick={handleCloseUserMenu}>
+        <Typography textAlign="center">{setting}</Typography>
+      </MenuItem>
+    ))}
+  </Menu>
+</Box>
+
           </Toolbar>
         </Container>
       </AppBar>
@@ -164,4 +181,3 @@ function App() {
 }
 
 export default App;
-//hello
