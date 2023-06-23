@@ -5,17 +5,18 @@ import streak from "../img/streak.png";
 import skill from "../img/skill.png";
 import visa from "../img/visa.png";
 import BalanceCard from "../component/balanceCard";
+import StreakCard from "../component/streakCard";
 
 const Dashboard = () => {
   return (
     <div style={{ height: "200px" }}>
       <div class="angry-grid">
         <div id="item-0">
-          {/* <img src={prt} style={{ width: "100%", borderRadius: "20px" }} /> */}
           <BalanceCard />
         </div>
         <div id="item-1">
           {/* <img src={streak} style={{ width: "100%", borderRadius: "20px" }} /> */}
+          <StreakCard />
         </div>
         <div id="item-2">
           {/* <img src={skill} style={{ width: "100%", borderRadius: "20px" }} /> */}
