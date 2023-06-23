@@ -84,7 +84,7 @@ const BalanceCard = () => {
         <p id="bottomRight">{`Rs ${expense}`}</p>
       </div>
       <div class="centered">
-        <p id="centered">{`Rs ${balance}`}</p>
+        <p id="centered">{`Rs${balance}`}</p>
       </div>
     </div>
   );
