@@ -11,24 +11,24 @@ const Tab = () => {
     <div>
       <div class="tabs">
         <div class="tabby-tab">
-          <input type="radio" id="tab-2" name="tabby-tabs" checked />
-          <label for="tab-2">My Expenses</label>
+          <input type="radio" id="tabss-2" name="tabby-tabs" checked />
+          <label for="tabss-2">My Expenses</label>
           <div class="tabby-content">
             <Expense />
           </div>
         </div>
 
         <div class="tabby-tab">
-          <input type="radio" id="tab-3" name="tabby-tabs" />
-          <label for="tab-3">Saving</label>
+          <input type="radio" id="tabss-3" name="tabby-tabs" />
+          <label for="tabss-3">Saving</label>
           <div class="tabby-content">
             <Saving />
           </div>
         </div>
 
         <div class="tabby-tab">
-          <input type="radio" id="tab-4" name="tabby-tabs" />
-          <label for="tab-4">My Card</label>
+          <input type="radio" id="tabss-4" name="tabby-tabs" />
+          <label for="tabss-4">My Card</label>
           <div class="tabby-content">
             <BankCard />
           </div>

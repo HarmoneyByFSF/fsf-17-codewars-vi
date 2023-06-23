@@ -7,6 +7,7 @@ import visa from "../img/visa.png";
 import BalanceCard from "../component/balanceCard";
 import StreakCard from "../component/streakCard";
 import Tab from "../component/tab";
+import LearnTab from "../component/LearnTab";
 
 const Dashboard = () => {
   return (
@@ -21,6 +22,7 @@ const Dashboard = () => {
         </div>
         <div id="item-2">
           {/* <img src={skill} style={{ width: "100%", borderRadius: "20px" }} /> */}
+          <LearnTab />
         </div>
         <div id="item-3">
           <Tab />
