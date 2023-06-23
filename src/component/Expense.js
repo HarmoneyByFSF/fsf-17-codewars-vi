@@ -140,9 +140,12 @@ const Expense = () => {
       </div>
       </div>
 
-      <div>
+      <div class="addbutton">
+          <button class="circle-button">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
         
-      </div>
     </div>
 
   );

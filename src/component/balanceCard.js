@@ -1,7 +1,7 @@
 import React from "react";
 import balanceCardBackground from "../img/balanceCard.png";
 import editBtn from "../img/edit.png";
-import "../style/balanceCard.css";
+import "../style/investmentpage.css";
 
 const BalanceCard = () => {
   function formatNumberWithCommas(number) {
