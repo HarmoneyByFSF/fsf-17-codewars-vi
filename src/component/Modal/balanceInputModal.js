@@ -3,20 +3,20 @@ import "../../style/InputModal.css";
 import successSound from "../../music/treasure.mp3";
 import editBtn from "../../img/edit.png";
 
-const BalanceInputModal = () => {
+const BalanceInputModal = ({ setCount, count }) => {
   const [openSuccess, setOpenSuccess] = useState(false);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState("");
+  const [balance, setBalance] = useState("");
+  const [income, setIncome] = useState("");
+  const [expense, setExpense] = useState("");
 
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("items"));
-    if (items) {
-      setItems(items);
-    }
-  }, []);
+  //   useEffect(() => {
+  //     const items = JSON.parse(localStorage.getItem("items"));
+  //     if (items) {
+  //       setItems(items);
+  //     }
+  //   }, []);
 
   console.log(items);
 
@@ -24,23 +24,24 @@ const BalanceInputModal = () => {
   audio.loop = false;
 
   function saveDataToLocalStorage() {
-    const existingData = JSON.parse(localStorage.getItem("Expenses"));
+    const existingData = JSON.parse(localStorage.getItem("Balance"));
 
-    console.log(Array.isArray(existingData));
+    // console.log(Array.isArray(existingData));
 
     const data = {
-      Title: title,
-      description: description,
-      amount: amount,
+      balance: balance,
+      income: income !== "" ? income : existingData.income,
+      expense: expense !== "" ? expense : existingData.expense,
     };
-    existingData.push(data);
+    // existingData.push(data);
 
-    localStorage.setItem("Expenses", JSON.stringify(existingData));
+    localStorage.setItem("Balance", JSON.stringify(data));
     setOpenSuccess(false);
+    setCount(count + 1);
   }
 
   function retrieveAllDataFromLocalStorage() {
-    const existingData = JSON.parse(localStorage.getItem("Expenses"));
+    const existingData = JSON.parse(localStorage.getItem("Balance"));
 
     console.log(Array.isArray(existingData));
   }
@@ -60,42 +61,42 @@ const BalanceInputModal = () => {
             &#x2716;
           </div>
           <h2 class="popup-title" style={{ color: "#484848" }}>
-            Add Expenses
+            Edit Balance
           </h2>
 
-          <label class="popup-subtitle">Title</label>
+          <label class="popup-subtitle">Balance</label>
           <br />
           <input
             class="expense-textfield"
             type=""
             id="text1"
-            value={title}
-            placeholder="Enter bill title"
-            onChange={(e) => setTitle(e.target.value)}
+            value={balance}
+            placeholder="Balance amount"
+            onChange={(e) => setBalance(e.target.value)}
           />
           <br />
 
-          <label class="popup-subtitle">Description</label>
+          <label class="popup-subtitle">Income</label>
           <br />
           <input
             class="expense-textfield"
             type="text"
             id="text2"
-            value={description}
-            placeholder="Enter bill description"
-            onChange={(e) => setDescription(e.target.value)}
+            value={income}
+            placeholder="Monthly income"
+            onChange={(e) => setIncome(e.target.value)}
           />
           <br />
 
-          <label class="popup-subtitle">Amount</label>
+          <label class="popup-subtitle">Expense</label>
           <br />
           <input
             class="expense-textfield"
             type="text"
             id="text3"
-            value={amount}
-            placeholder="Enter bill amount"
-            onChange={(e) => setAmount(e.target.value)}
+            value={expense}
+            placeholder="Monthly expense"
+            onChange={(e) => setExpense(e.target.value)}
           />
           <br />
 
@@ -108,7 +109,7 @@ const BalanceInputModal = () => {
               audio.play();
             }}
           >
-            Add Expense
+            Save
           </button>
 
           {/* <script type="text/javascript">
