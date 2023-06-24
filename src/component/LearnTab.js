@@ -34,6 +34,8 @@ const LearnTab = () => {
             </div>
           </div>
         </div>
+
+
         <div className="tabss">
           <div className="tab">
             <input
