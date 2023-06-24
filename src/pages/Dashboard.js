@@ -4,9 +4,9 @@ import prt from "../img/card1.png";
 import streak from "../img/streak.png";
 import skill from "../img/skill.png";
 import visa from "../img/visa.png";
-import BalanceCard from "../component/balanceCard";
-import StreakCard from "../component/streakCard";
-import Tab from "../component/tab";
+import BalanceCard from "../component/BalanceCard";
+import StreakCard from "../component/StreakCard";
+import Tab from "../component/Tab";
 import LearnTab from "../component/LearnTab";
 
 const Dashboard = () => {

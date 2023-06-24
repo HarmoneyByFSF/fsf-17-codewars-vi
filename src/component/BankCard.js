@@ -64,46 +64,6 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
             </div>
           ))}
 
-          {/* <div className="transactions-container">
-            <div className="transactions-details">
-              <p id="transaction-title" style={{ color: "#939393" }}>
-                Grocery
-              </p>
-              <p id="transaction-amount" style={{ color: "Red" }}>
-                Rs -1000
-              </p>
-            </div>
-          </div>
-          <div className="transactions-container">
-            <div className="transactions-details">
-              <p id="transaction-title" style={{ color: "#939393" }}>
-                Grocery
-              </p>
-              <p id="transaction-amount" style={{ color: "Red" }}>
-                Rs -1000
-              </p>
-            </div>
-          </div>
-          <div className="transactions-container">
-            <div className="transactions-details">
-              <p id="transaction-title" style={{ color: "#939393" }}>
-                Grocery
-              </p>
-              <p id="transaction-amount" style={{ color: "Red" }}>
-                Rs -1000
-              </p>
-            </div>
-          </div>
-          <div className="transactions-container">
-            <div className="transactions-details">
-              <p id="transaction-title" style={{ color: "#939393" }}>
-                Grocery
-              </p>
-              <p id="transaction-amount" style={{ color: "Red" }}>
-                Rs -1000
-              </p>
-            </div>
-          </div> */}
           <div className="button-container">
             <div></div>
             <div className="add-button" onClick={() => setVisible(true)}>

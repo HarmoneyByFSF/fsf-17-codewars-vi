@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../style/savingComponent.css";
-import dinner from "../img/dinner.png";
 import outing from "../img/outing.png";
-import tick from "../img/rightclick.png";
 import blank from "../img/blankecllipse.png";
 
 const Saving = ({ setVisible, isSavingNew, setIsSavingNew }) => {
@@ -35,48 +33,6 @@ const Saving = ({ setVisible, isSavingNew, setIsSavingNew }) => {
               <img src={blank} className="savinggoal-image" alt="" />
             </div>
           ))}
-
-          {/* <div
-            className="savinggoal-container"
-            style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
-          >
-            <img src={outing} className="savinggoal-image" alt="" />
-            <div className="savinggoal-title">Outing</div>
-
-            <div className="savinggoal-date">24 November 2023</div>
-
-            <div className="savinggoal-price">Rs 350.0</div>
-
-            <img src={blank} className="savinggoal-image" alt="" />
-          </div>
-
-          <div
-            className="savinggoal-container"
-            style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
-          >
-            <img src={outing} className="savinggoal-image" alt="" />
-            <div className="savinggoal-title">Outing</div>
-
-            <div className="savinggoal-date">24 November 2023</div>
-
-            <div className="savinggoal-price">Rs 350.0</div>
-
-            <img src={blank} className="savinggoal-image" alt="" />
-          </div>
-
-          <div
-            className="savinggoal-container"
-            style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
-          >
-            <img src={outing} className="savinggoal-image" alt="" />
-            <div className="savinggoal-title">Outing</div>
-
-            <div className="savinggoal-date">24 November 2023</div>
-
-            <div className="savinggoal-price">Rs 350.0</div>
-
-            <img src={blank} className="savinggoal-image" alt="" />
-          </div> */}
         </div>
 
         <div style={{ paddingTop: "50px" }}>

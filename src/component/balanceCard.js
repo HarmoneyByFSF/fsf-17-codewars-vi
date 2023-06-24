@@ -2,17 +2,13 @@ import React, { useState, useEffect } from "react";
 import balanceCardBackground from "../img/balanceCard.png";
 import editBtn from "../img/edit.png";
 import "../style/balanceCard.css";
-import BalanceInputModal from "./Modal/balanceInputModal";
+import BalanceInputModal from "./Modal/BalanceInputModal";
 
 const BalanceCard = ({ isBalanceNew, setBalanceNew }) => {
   const [balance, setBalance] = useState("");
   const [income, setIncome] = useState("");
   const [expense, setExpense] = useState("");
   const [count, setCount] = useState(0);
-
-  // const update = () => {
-  //   setCount(count++)
-  // }
 
   useEffect(() => {
     console.log("rerere");
@@ -59,10 +55,6 @@ const BalanceCard = ({ isBalanceNew, setBalanceNew }) => {
     // Return the formatted number
     return formattedNumber;
   }
-
-  // const balance = formatNumberWithCommas("34505.00");
-  // const income = formatNumberWithCommas("25550.00");
-  // const expense = formatNumberWithCommas("8545.00");
 
   return (
     <div id="cardContainer" className="position-relative animated zoomIn">

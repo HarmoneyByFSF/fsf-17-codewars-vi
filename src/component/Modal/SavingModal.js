@@ -9,17 +9,6 @@ const SavingModal = ({ visible, setVisible, isSavingNew, setIsSavingNew }) => {
   const [date, setDate] = useState("");
   const [amount, setAmount] = useState("");
 
-  // const [items, setItems] = useState([]);
-
-  // useEffect(() => {
-  //   const items = JSON.parse(localStorage.getItem("Saving"));
-  //   if (items) {
-  //     setItems(items);
-  //   }
-  // }, []);
-
-  // console.log(items);
-
   const audio = new Audio(successSound);
   audio.loop = false;
 

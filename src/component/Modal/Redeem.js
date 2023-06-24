@@ -49,16 +49,9 @@ const Redeem = () => {
     setOpenSuccess(false);
   }
 
-  function retrieveAllDataFromLocalStorage() {
-    const existingData = JSON.parse(localStorage.getItem("Expenses"));
-
-    console.log(Array.isArray(existingData));
-  }
   const { width, height } = 2030;
   return (
     <div>
-      {/* <button >Show Pop-up</button> */}
-      {/* <img src={editBtn} alt="Edit" onClick={() => setOpenSuccess(true)} /> */}
       <div
         className="button"
         onClick={() => {
