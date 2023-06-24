@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../style/bankCard.css";
 import visa from "../img/visa_card.png";
 import edit from "../img/edit_card.png";
-const BankCard = ({ setVisible }) => {
+const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("Transaction"));
+    if (items) {
+      setItems(items);
+    }
+    console.log(items);
+  }, [isTransactionNew]);
+
   return (
     <div class="overall">
       <div class="first-row">
@@ -38,7 +48,23 @@ const BankCard = ({ setVisible }) => {
       <div class="second-row">
         <p id="transaction">Transaction</p>
         <div class="transactions">
-          <div class="transactions-container">
+          {items?.map((trn, index) => (
+            <div class="transactions-container">
+              <div class="transactions-details">
+                <p id="transaction-title" style={{ color: "#939393" }}>
+                  {trn.name}
+                </p>
+                <p
+                  id="transaction-amount"
+                  style={{ color: trn.sign ? "green" : "red" }}
+                >
+                  {trn.sign ? `+ Rs ${trn.amount}` : `- Rs ${trn.amount}`}
+                </p>
+              </div>
+            </div>
+          ))}
+
+          {/* <div class="transactions-container">
             <div class="transactions-details">
               <p id="transaction-title" style={{ color: "#939393" }}>
                 Grocery
@@ -77,17 +103,7 @@ const BankCard = ({ setVisible }) => {
                 Rs -1000
               </p>
             </div>
-          </div>
-          <div class="transactions-container">
-            <div class="transactions-details">
-              <p id="transaction-title" style={{ color: "#939393" }}>
-                Grocery
-              </p>
-              <p id="transaction-amount" style={{ color: "Red" }}>
-                Rs -1000
-              </p>
-            </div>
-          </div>
+          </div> */}
           <div class="button-container">
             <div></div>
             <div class="add-button" onClick={() => setVisible(true)}>

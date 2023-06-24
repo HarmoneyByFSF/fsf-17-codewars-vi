@@ -4,7 +4,7 @@ import editBtn from "../img/edit.png";
 import "../style/investmentpage.css";
 import BalanceInputModal from "./Modal/balanceInputModal";
 
-const BalanceCard = () => {
+const BalanceCard = ({ isBalanceNew, setBalanceNew }) => {
   const [balance, setBalance] = useState("");
   const [income, setIncome] = useState("");
   const [expense, setExpense] = useState("");
@@ -22,7 +22,7 @@ const BalanceCard = () => {
       setIncome(formatNumberWithCommas(card.income));
       setExpense(formatNumberWithCommas(card.expense));
     }
-  }, [count]);
+  }, [count, isBalanceNew]);
 
   function formatNumberWithCommas(number) {
     // Convert the number to a string
