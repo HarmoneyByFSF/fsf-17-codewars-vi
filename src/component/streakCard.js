@@ -8,19 +8,19 @@ import Redeem from "./Modal/Redeem";
 
 const StreakCard = () => {
   return (
-    <div id="cardContainer" class="position-relative animated zoomIn">
-      <img class="img-fluid" src={streakBack} alt="" />
-      <div class="top-left-coin">
-        <div class="streak-text">
-          <img src={coin} class="dollar-coin" alt="" />
-          <div class="text">
+    <div id="cardContainer" className="position-relative animated zoomIn">
+      <img className="img-fluid" src={streakBack} alt="" />
+      <div className="top-left-coin">
+        <div className="streak-text">
+          <img src={coin} className="dollar-coin" alt="" />
+          <div className="text">
             <p>3 day streak</p>
             <p>Way to go!</p>
           </div>
         </div>
         <Redeem />
-        {/* <div class="button">Redeem</div> */}
-        <div class="column-configuration">
+        {/* <div className="button">Redeem</div> */}
+        <div className="column-configuration">
           <div clas="streak-days">
             <p>T</p>
             <img src={tick} alt="Tick" />
@@ -35,7 +35,7 @@ const StreakCard = () => {
           </div>
         </div>
       </div>
-      <div class="picture">
+      <div className="picture">
         <img src={streak_person} alt="Tick" />
       </div>
     </div>

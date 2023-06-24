@@ -62,23 +62,32 @@ const ExpenseModal = ({
     <div>
       <div
         id="popup-container-expense-details"
-        class="popup-container-expense-details"
+        className="popup-container-expense-details"
         style={{ display: visible ? "flex" : "none" }}
       >
-        <div class="popup-content-expense-details">
-          <div class="close-button-expense-details" onClick={() => setVisible(false)}>
+        <div className="popup-content-expense-details">
+          <div
+            className="close-button-expense-details"
+            onClick={() => setVisible(false)}
+          >
             &#x2716;
           </div>
-          <h2 class="popup-title-expense-details" style={{ color: "#484848" }}>
+          <h2
+            className="popup-title-expense-details"
+            style={{ color: "#484848" }}
+          >
             Add Expenses
           </h2>
 
-          <label class="popup-subtitle-expense-details" style={{ paddingBottom: "-20px" }}>
+          <label
+            className="popup-subtitle-expense-details"
+            style={{ paddingBottom: "-20px" }}
+          >
             Title
           </label>
           <br />
           <input
-            class="expense-textfield-expense-details"
+            className="expense-textfield-expense-details"
             type=""
             id="text1"
             value={title}
@@ -87,10 +96,10 @@ const ExpenseModal = ({
           />
           <br />
 
-          <label class="popup-subtitle-expense-details">Description</label>
+          <label className="popup-subtitle-expense-details">Description</label>
           <br />
           <input
-            class="expense-textfield-expense-details"
+            className="expense-textfield-expense-details"
             type="text"
             id="text2"
             value={description}
@@ -99,10 +108,10 @@ const ExpenseModal = ({
           />
           <br />
 
-          <label class="popup-subtitle-expense-details">Amount</label>
+          <label className="popup-subtitle-expense-details">Amount</label>
           <br />
           <input
-            class="expense-textfield-expense-details"
+            className="expense-textfield-expense-details"
             type="text"
             id="text3"
             value={amount}
@@ -112,7 +121,7 @@ const ExpenseModal = ({
           <br />
 
           <button
-            class="buttonContinue-expense-details"
+            className="buttonContinue-expense-details"
             onClick={() => {
               saveDataToLocalStorage();
               retrieveAllDataFromLocalStorage();

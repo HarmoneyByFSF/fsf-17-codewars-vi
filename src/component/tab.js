@@ -18,7 +18,7 @@ const Tab = ({ isBalanceNew, setBalanceNew }) => {
 
   return (
     <div>
-      <div class="tabs">
+      <div className="tabs">
         <ExpenseModal
           visible={openExpenseModal}
           setVisible={setOpenExpenseModal}
@@ -38,10 +38,10 @@ const Tab = ({ isBalanceNew, setBalanceNew }) => {
           setIsTransaction={setIsTransaction}
           setBalanceNew={setBalanceNew}
         />
-        <div class="tabby-tab">
+        <div className="tabby-tab">
           <input type="radio" id="tabss-2" name="tabby-tabs" checked />
           <label for="tabss-2">My Expenses</label>
-          <div class="tabby-content">
+          <div className="tabby-content">
             <Expense
               setVisible={setOpenExpenseModal}
               isExpenseNew={isExpenseNew}
@@ -50,10 +50,10 @@ const Tab = ({ isBalanceNew, setBalanceNew }) => {
           </div>
         </div>
 
-        <div class="tabby-tab">
+        <div className="tabby-tab">
           <input type="radio" id="tabss-3" name="tabby-tabs" />
           <label for="tabss-3">Saving</label>
-          <div class="tabby-content">
+          <div className="tabby-content">
             <Saving
               setVisible={setOpenSavingModal}
               isSavingNew={isSavingNew}
@@ -62,10 +62,10 @@ const Tab = ({ isBalanceNew, setBalanceNew }) => {
           </div>
         </div>
 
-        <div class="tabby-tab">
+        <div className="tabby-tab">
           <input type="radio" id="tabss-4" name="tabby-tabs" />
           <label for="tabss-4">My Card</label>
-          <div class="tabby-content">
+          <div className="tabby-content">
             <BankCard
               setVisible={setOpenTransactionModal}
               isTransactionNew={isTransactionNew}

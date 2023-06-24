@@ -41,7 +41,7 @@ const LearnTab = () => {
   return (
     <div>
       <BuyStock visible={openBuyModal} setVisible={setOpenBuyModal} />
-      <div class="wrapper">
+      <div className="wrapper">
         <div
           style={{
             paddingTop: "20px",
@@ -59,52 +59,52 @@ const LearnTab = () => {
           </div>
 
           <div style={{ paddingTop: "10px" }}>
-            <div class="loading-bar">
-              <div class="progress"></div>
+            <div className="loading-bar">
+              <div className="progress"></div>
             </div>
           </div>
         </div>
-        <div class="tabss">
-          <div class="tab">
+        <div className="tabss">
+          <div className="tab">
             <input
               type="radio"
               name="css-tabss"
               id="tab-1"
               checked
-              class="tab-switch"
+              className="tab-switch"
             />
-            <label for="tab-1" class="tab-label">
+            <label for="tab-1" className="tab-label">
               Course
             </label>
-            <div class="tab-content">
+            <div className="tab-content">
               <Course />
             </div>
           </div>
-          <div class="tab">
+          <div className="tab">
             <input
               type="radio"
               name="css-tabss"
               id="tab-2"
-              class="tab-switch"
+              className="tab-switch"
             />
-            <label for="tab-2" class="tab-label">
+            <label for="tab-2" className="tab-label">
               Investment Simulation
             </label>
-            <div class="tab-content">
+            <div className="tab-content">
               <Investment setVisible={setOpenBuyModal} />
             </div>
           </div>
-          {/* <div class="tab">
+          {/* <div className="tab">
             <input
               type="radio"
               name="css-tabss"
               id="tab-3"
-              class="tab-switch"
+              className="tab-switch"
             />
-            <label for="tab-3" class="tab-label">
+            <label for="tab-3" className="tab-label">
               Tab Three
             </label>
-            <div class="tab-content">
+            <div className="tab-content">
               When I left Mr. Bates, I went down to my father: where, by the
               assistance of him and my uncle John, and some other relations, I
               got forty pounds, and a promise of thirty pounds a year to

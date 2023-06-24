@@ -49,61 +49,76 @@ const SavingModal = ({ visible, setVisible, isSavingNew, setIsSavingNew }) => {
     <div>
       <div
         id="popup-container-saving-details"
-        class="popup-container-saving-details"
+        className="popup-container-saving-details"
         style={{ display: visible ? "flex" : "none" }}
       >
-        <div class="popup-content-saving-details">
+        <div className="popup-content-saving-details">
           <div
-            class="close-button-saving-details"
+            className="close-button-saving-details"
             onClick={() => setVisible(false)}
           >
             &#x2716;
           </div>
 
-          <h3 class="popup-title-saving-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title-saving-details"
+            style={{ color: "#484848" }}
+          >
             Add Saving Goal
           </h3>
-          <h3 class="popup-title2-saving-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title2-saving-details"
+            style={{ color: "#484848" }}
+          >
             Title:
           </h3>
           <input
-            class="expense-textfield-saving-details"
+            className="expense-textfield-saving-details"
             type="text"
             id="Quantity"
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <h3 class="popup-title2-saving-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title2-saving-details"
+            style={{ color: "#484848" }}
+          >
             Date:
           </h3>
           <input
-            class="expense-textfield-saving-details"
+            className="expense-textfield-saving-details"
             type="text"
             id="Quantity"
             placeholder="Date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
-          <h3 class="popup-title2-saving-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title2-saving-details"
+            style={{ color: "#484848" }}
+          >
             Amount:
           </h3>
           <input
-            class="expense-textfield-saving-details"
+            className="expense-textfield-saving-details"
             type="text"
             id="Quantity"
             placeholder="Amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
-          <h3 class="popup-title2-saving-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title2-saving-details"
+            style={{ color: "#484848" }}
+          >
             Upload image
             <img src={link} />
           </h3>
 
-          <div class="button-container-saving-details">
+          <div className="button-container-saving-details">
             <button
-              class="buttonContinue-saving-details"
+              className="buttonContinue-saving-details"
               onClick={() => {
                 saveDataToLocalStorage();
                 audio.loop = false;

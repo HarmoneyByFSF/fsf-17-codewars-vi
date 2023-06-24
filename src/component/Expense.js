@@ -26,8 +26,14 @@ const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
               style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
             >
               <div className="expense-row-expense-card">
-                <div className="expense-title-expense-card">{expenses.Title}</div>
-                <img className="expense-image-expense-card" src={cwa} alt="Expense Image" />
+                <div className="expense-title-expense-card">
+                  {expenses.Title}
+                </div>
+                <img
+                  className="expense-image-expense-card"
+                  src={cwa}
+                  alt="Expense Image"
+                />
               </div>
               <div className="expense-row-expense-card">
                 <div className="expense-description-expense-card">
@@ -35,10 +41,17 @@ const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
                 </div>
               </div>
               <div className="expense-row-expense-card">
-                <div className="expense-due-date-expense-card">Due Date: 2 July 2023</div>
+                <div className="expense-due-date-expense-card">
+                  Due Date: 2 July 2023
+                </div>
               </div>
               <div className="expense-row-expense-card">
-                <div className="expense-alarm-expense-card" style={{color : "black" , fontWeight: "500"}}>Amount: Rs {expenses.amount}</div>
+                <div
+                  className="expense-alarm-expense-card"
+                  style={{ color: "black", fontWeight: "500" }}
+                >
+                  Amount: Rs {expenses.amount}
+                </div>
               </div>
               {/* <div className="expense-row1">
                 <img
@@ -147,9 +160,9 @@ const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
         </div>
       </div>
 
-      <div class="addbutton-expense-card">
-        <button class="circle-button" onClick={() => setVisible(true)}>
-          <i class="fas fa-plus"></i>
+      <div className="addbutton-expense-card">
+        <button className="circle-button" onClick={() => setVisible(true)}>
+          <i className="fas fa-plus"></i>
         </button>
         {/* <ExpenseModal /> */}
       </div>

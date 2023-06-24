@@ -22,70 +22,70 @@ const Saving = ({ setVisible, isSavingNew, setIsSavingNew }) => {
         <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
           {items?.map((saving, index) => (
             <div
-              class="savinggoal-container"
+              className="savinggoal-container"
               style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
             >
-              <img src={outing} class="savinggoal-image" alt="" />
-              <div class="savinggoal-title">{saving.Title}</div>
+              <img src={outing} className="savinggoal-image" alt="" />
+              <div className="savinggoal-title">{saving.Title}</div>
 
-              <div class="savinggoal-date">{saving.date}</div>
+              <div className="savinggoal-date">{saving.date}</div>
 
-              <div class="savinggoal-price"> Rs {saving.amount}</div>
+              <div className="savinggoal-price"> Rs {saving.amount}</div>
 
-              <img src={blank} class="savinggoal-image" alt="" />
+              <img src={blank} className="savinggoal-image" alt="" />
             </div>
           ))}
 
           {/* <div
-            class="savinggoal-container"
+            className="savinggoal-container"
             style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
           >
-            <img src={outing} class="savinggoal-image" alt="" />
-            <div class="savinggoal-title">Outing</div>
+            <img src={outing} className="savinggoal-image" alt="" />
+            <div className="savinggoal-title">Outing</div>
 
-            <div class="savinggoal-date">24 November 2023</div>
+            <div className="savinggoal-date">24 November 2023</div>
 
-            <div class="savinggoal-price">Rs 350.0</div>
+            <div className="savinggoal-price">Rs 350.0</div>
 
-            <img src={blank} class="savinggoal-image" alt="" />
+            <img src={blank} className="savinggoal-image" alt="" />
           </div>
 
           <div
-            class="savinggoal-container"
+            className="savinggoal-container"
             style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
           >
-            <img src={outing} class="savinggoal-image" alt="" />
-            <div class="savinggoal-title">Outing</div>
+            <img src={outing} className="savinggoal-image" alt="" />
+            <div className="savinggoal-title">Outing</div>
 
-            <div class="savinggoal-date">24 November 2023</div>
+            <div className="savinggoal-date">24 November 2023</div>
 
-            <div class="savinggoal-price">Rs 350.0</div>
+            <div className="savinggoal-price">Rs 350.0</div>
 
-            <img src={blank} class="savinggoal-image" alt="" />
+            <img src={blank} className="savinggoal-image" alt="" />
           </div>
 
           <div
-            class="savinggoal-container"
+            className="savinggoal-container"
             style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
           >
-            <img src={outing} class="savinggoal-image" alt="" />
-            <div class="savinggoal-title">Outing</div>
+            <img src={outing} className="savinggoal-image" alt="" />
+            <div className="savinggoal-title">Outing</div>
 
-            <div class="savinggoal-date">24 November 2023</div>
+            <div className="savinggoal-date">24 November 2023</div>
 
-            <div class="savinggoal-price">Rs 350.0</div>
+            <div className="savinggoal-price">Rs 350.0</div>
 
-            <img src={blank} class="savinggoal-image" alt="" />
+            <img src={blank} className="savinggoal-image" alt="" />
           </div> */}
         </div>
 
-        <div style={{paddingTop : "50px"}}>
+        <div style={{ paddingTop: "50px" }}>
           <p style={{ fontSize: "20px", fontWeight: "400", color: "black" }}>
             Tip
           </p>
 
-          <div class="rowd">
-            <div class="tipstext">
+          <div className="rowd">
+            <div className="tipstext">
               <span>
                 Have a clear picture of the regular expenses <br></br> and
                 spending habits.<br></br>
@@ -93,13 +93,12 @@ const Saving = ({ setVisible, isSavingNew, setIsSavingNew }) => {
                 cut back and save.
               </span>
             </div>
-            <div class="addbutton" onClick={() => setVisible(true)}>
-              <button class="circle-button">
-                <i class="fas fa-plus"></i>
+            <div className="addbutton" onClick={() => setVisible(true)}>
+              <button className="circle-button">
+                <i className="fas fa-plus"></i>
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </div>

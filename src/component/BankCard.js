@@ -14,43 +14,43 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
   }, [isTransactionNew]);
 
   return (
-    <div class="overall">
-      <div class="first-row">
-        <div class="first-column">
-          <div class="title-details">
+    <div className="overall">
+      <div className="first-row">
+        <div className="first-column">
+          <div className="title-details">
             <p id="cardDetails">Card Details</p>
             <p id="expiryDate">Expiry Date: 24 April 2022</p>
             <p id="limit">Card Limit: Rs 10,000</p>
           </div>
 
-          <div class="edit-card">
-            <img class="img-fluid" src={edit} alt="" />
+          <div className="edit-card">
+            <img className="img-fluid" src={edit} alt="" />
           </div>
         </div>
 
-        <div class="second-column">
-          <div id="cardContainer" class="position-relative">
-            <img class="img-fluid" src={visa} alt="" />
-            <div class="bottom-left-visa">
+        <div className="second-column">
+          <div id="cardContainer" className="position-relative">
+            <img className="img-fluid" src={visa} alt="" />
+            <div className="bottom-left-visa">
               <p id="cardNumber">CARD NUMBER</p>
               <p id="lockedCardNumber">1412 4143 5328 2393 1247</p>
               <p id="validity">VALID THRU</p>
               <p id="date">04/24</p>
             </div>
 
-            <div class="top-right-visa">
+            <div className="top-right-visa">
               <p id="topRightVisa">Rs 1234</p>
             </div>
           </div>
         </div>
-        <div class="third-column"></div>
+        <div className="third-column"></div>
       </div>
-      <div class="second-row">
+      <div className="second-row">
         <p id="transaction">Transaction</p>
-        <div class="transactions">
+        <div className="transactions">
           {items?.map((trn, index) => (
-            <div class="transactions-container">
-              <div class="transactions-details">
+            <div className="transactions-container">
+              <div className="transactions-details">
                 <p id="transaction-title" style={{ color: "#939393" }}>
                   {trn.name}
                 </p>
@@ -64,8 +64,8 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
             </div>
           ))}
 
-          {/* <div class="transactions-container">
-            <div class="transactions-details">
+          {/* <div className="transactions-container">
+            <div className="transactions-details">
               <p id="transaction-title" style={{ color: "#939393" }}>
                 Grocery
               </p>
@@ -74,8 +74,8 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
               </p>
             </div>
           </div>
-          <div class="transactions-container">
-            <div class="transactions-details">
+          <div className="transactions-container">
+            <div className="transactions-details">
               <p id="transaction-title" style={{ color: "#939393" }}>
                 Grocery
               </p>
@@ -84,8 +84,8 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
               </p>
             </div>
           </div>
-          <div class="transactions-container">
-            <div class="transactions-details">
+          <div className="transactions-container">
+            <div className="transactions-details">
               <p id="transaction-title" style={{ color: "#939393" }}>
                 Grocery
               </p>
@@ -94,8 +94,8 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
               </p>
             </div>
           </div>
-          <div class="transactions-container">
-            <div class="transactions-details">
+          <div className="transactions-container">
+            <div className="transactions-details">
               <p id="transaction-title" style={{ color: "#939393" }}>
                 Grocery
               </p>
@@ -104,10 +104,10 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
               </p>
             </div>
           </div> */}
-          <div class="button-container">
+          <div className="button-container">
             <div></div>
-            <div class="add-button" onClick={() => setVisible(true)}>
-              <span class="plus-sign">+</span>
+            <div className="add-button" onClick={() => setVisible(true)}>
+              <span className="plus-sign">+</span>
             </div>
           </div>
         </div>
