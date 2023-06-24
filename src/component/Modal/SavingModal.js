@@ -35,6 +35,9 @@ const SavingModal = ({
       localStorage.setItem("Saving", JSON.stringify([data]));
     }
 
+    const getCoin = JSON.parse(localStorage.getItem("BalanceCoin"));
+    const newCoin = { amount: parseInt(getCoin.amount) + 5 };
+    localStorage.setItem("BalanceCoin", JSON.stringify(newCoin));
     setIsSavingNew(isSavingNew + 1);
     setVisible(false);
 
