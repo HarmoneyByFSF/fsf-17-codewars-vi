@@ -93,24 +93,22 @@
 .scrollable-container-investment-page {
     overflow-y: auto;
     overflow-x: hidden;
-    /* Add this line to hide the horizontal scrollbar */
     max-height: 500px;
     padding: 20px;
-}
-
-.scrollable-container--investment-page::-webkit-scrollbar {
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar {
     width: 8px;
-}
-
-.scrollable-container-investment-page::-webkit-scrollbar-thumb {
-    background-color: #8D64FF;
-}
-
-.scrollable-container-investment-page::-webkit-scrollbar-track {
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar-thumb {
+    background-color: #8D64FF; /* Set the background color of the thumb */
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar-track {
     background-color: transparent;
-}
-
-
+  }
+  
 .container-stock-investment-page {
     width: 100%;
     padding: 3px;
