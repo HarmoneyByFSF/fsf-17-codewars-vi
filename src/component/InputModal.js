@@ -58,21 +58,21 @@ const InputModal = () => {
 
       <div
         id="popup-container"
-        class="popup-container"
+        className="popup-container"
         style={{ display: openSuccess ? "flex" : "none" }}
       >
-        <div class="popup-content">
-          <div class="close-button" onClick={() => setOpenSuccess(false)}>
+        <div className="popup-content">
+          <div className="close-button" onClick={() => setOpenSuccess(false)}>
             &#x2716;
           </div>
-          <h2 class="popup-title" style={{ color: "#484848" }}>
+          <h2 className="popup-title" style={{ color: "#484848" }}>
             Add Expenses
           </h2>
 
-          <label class="popup-subtitle">Title</label>
+          <label className="popup-subtitle">Title</label>
           <br />
           <input
-            class="expense-textfield"
+            className="expense-textfield"
             type=""
             id="text1"
             value={title}
@@ -81,10 +81,10 @@ const InputModal = () => {
           />
           <br />
 
-          <label class="popup-subtitle">Description</label>
+          <label className="popup-subtitle">Description</label>
           <br />
           <input
-            class="expense-textfield"
+            className="expense-textfield"
             type="text"
             id="text2"
             value={description}
@@ -93,10 +93,10 @@ const InputModal = () => {
           />
           <br />
 
-          <label class="popup-subtitle">Amount</label>
+          <label className="popup-subtitle">Amount</label>
           <br />
           <input
-            class="expense-textfield"
+            className="expense-textfield"
             type="text"
             id="text3"
             value={amount}
@@ -106,7 +106,7 @@ const InputModal = () => {
           <br />
 
           <button
-            class="buttonContinue"
+            className="buttonContinue"
             onClick={() => {
               saveDataToLocalStorage();
               retrieveAllDataFromLocalStorage();

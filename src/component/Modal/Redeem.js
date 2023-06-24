@@ -60,7 +60,7 @@ const Redeem = () => {
       {/* <button >Show Pop-up</button> */}
       {/* <img src={editBtn} alt="Edit" onClick={() => setOpenSuccess(true)} /> */}
       <div
-        class="button"
+        className="button"
         onClick={() => {
           audio.loop = false;
           audio.play();
@@ -72,7 +72,7 @@ const Redeem = () => {
 
       <div
         id="popup-container"
-        class="popup-container"
+        className="popup-container"
         style={{ display: openSuccess ? "flex" : "none" }}
       >
         {showCode || showCode1 || showCode2 ? (
@@ -81,35 +81,35 @@ const Redeem = () => {
           ""
         )}
 
-        <div class="popup-content">
-          <div class="close-button" onClick={() => setOpenSuccess(false)}>
+        <div className="popup-content">
+          <div className="close-button" onClick={() => setOpenSuccess(false)}>
             &#x2716;
           </div>
-          <h2 class="popup-title" style={{ color: "#484848" }}>
+          <h2 className="popup-title" style={{ color: "#484848" }}>
             Redeem Coins
           </h2>
-          <div class="redeem-content">
-            <div class="stock-container">
-              <div class="content">
-                <div class="stock-details">
-                  <div class="coins-amount-container">
+          <div className="redeem-content">
+            <div className="stock-container">
+              <div className="content">
+                <div className="stock-details">
+                  <div className="coins-amount-container">
                     <img
                       src={coin}
-                      class="dollar-coin"
+                      className="dollar-coin"
                       alt=""
                       style={{ width: "35px", height: "35px" }}
                     />
-                    <div class="coins-amount">
+                    <div className="coins-amount">
                       <p>{showCode ? "Code: 58RRRR" : "34 coins"}</p>
                     </div>
                   </div>
 
-                  <div class="stock-name">
+                  <div className="stock-name">
                     <p>Allsport shoes</p>
                   </div>
                 </div>
                 {showCode === false ? (
-                  <div class="buy-button">
+                  <div className="buy-button">
                     <p
                       onClick={() => {
                         setShowCode(true);
@@ -126,27 +126,27 @@ const Redeem = () => {
                 )}
               </div>
             </div>
-            <div class="stock-container">
-              <div class="content">
-                <div class="stock-details">
-                  <div class="coins-amount-container">
+            <div className="stock-container">
+              <div className="content">
+                <div className="stock-details">
+                  <div className="coins-amount-container">
                     <img
                       src={coin}
-                      class="dollar-coin"
+                      className="dollar-coin"
                       alt=""
                       style={{ width: "35px", height: "35px" }}
                     />
-                    <div class="coins-amount">
+                    <div className="coins-amount">
                       <p>{showCode1 ? "Code: cd2" : "15 coins"}</p>
                     </div>
                   </div>
 
-                  <div class="stock-name">
+                  <div className="stock-name">
                     <p>Magasin 58 rrr</p>
                   </div>
                 </div>
 
-                <div class="buy-button">
+                <div className="buy-button">
                   <p
                     onClick={() => {
                       setShowCode1(true);
@@ -160,27 +160,27 @@ const Redeem = () => {
                 </div>
               </div>
             </div>
-            <div class="stock-container">
-              <div class="content">
-                <div class="stock-details">
-                  <div class="coins-amount-container">
+            <div className="stock-container">
+              <div className="content">
+                <div className="stock-details">
+                  <div className="coins-amount-container">
                     <img
                       src={coin}
-                      class="dollar-coin"
+                      className="dollar-coin"
                       alt=""
                       style={{ width: "35px", height: "35px" }}
                     />
-                    <div class="coins-amount">
+                    <div className="coins-amount">
                       <p>{showCode2 ? "Code: cd3" : "45 coins"}</p>
                     </div>
                   </div>
 
-                  <div class="stock-name">
+                  <div className="stock-name">
                     <p>CitySport shoes</p>
                   </div>
                 </div>
 
-                <div class="buy-button">
+                <div className="buy-button">
                   <p
                     onClick={() => {
                       setShowCode2(true);

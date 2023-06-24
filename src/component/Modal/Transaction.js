@@ -62,47 +62,62 @@ const Transaction = ({
     <div>
       <div
         id="popup-container-transaction-details"
-        class="popup-container-transaction-details"
+        className="popup-container-transaction-details"
         style={{ display: visible ? "flex" : "none" }}
       >
-        <div class="popup-content-transaction-details">
-          <div class="close-button-transaction-details" onClick={() => setVisible(false)}>
+        <div className="popup-content-transaction-details">
+          <div
+            className="close-button-transaction-details"
+            onClick={() => setVisible(false)}
+          >
             &#x2716;
           </div>
 
-          <h3 class="popup-title-transaction-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title-transaction-details"
+            style={{ color: "#484848" }}
+          >
             Add Transactions
           </h3>
-          <h3 class="popup-title2-transaction-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title2-transaction-details"
+            style={{ color: "#484848" }}
+          >
             Name:
           </h3>
           <input
-            class="expense-textfield-transaction-details"
+            className="expense-textfield-transaction-details"
             type="text"
             id="Quantity"
             placeholder="Name of Transactions"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <h3 class="popup-title2-transaction-details" style={{ color: "#484848" }}>
+          <h3
+            className="popup-title2-transaction-details"
+            style={{ color: "#484848" }}
+          >
             Amount:
           </h3>
           <input
-            class="expense-textfield-transaction-details"
+            className="expense-textfield-transaction-details"
             type="text"
             id="Quantity"
             placeholder="Amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
-          <h3 class="popup-title1-transaction-details" style={{ color: "#797979" }}>
+          <h3
+            className="popup-title1-transaction-details"
+            style={{ color: "#797979" }}
+          >
             A transaction can be an addition to the balance or an expenses.
             Please click the correct button below
           </h3>
 
-          <div class="button-containerr-transaction-details">
+          <div className="button-containerr-transaction-details">
             <button
-              class="buttonContinue-transaction-details"
+              className="buttonContinue-transaction-details"
               style={{ backgroundColor: "green" }}
               onClick={() => {
                 saveDataToLocalStorage(true);
@@ -110,10 +125,19 @@ const Transaction = ({
                 audio.play();
               }}
             >
-              <h1 style={{color : "white", display: "flex" , justifyContent: "center", alignItems: "center"}}>+</h1>
+              <h1
+                style={{
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                +
+              </h1>
             </button>
             <button
-              class="buttonContinue2-transaction-details"
+              className="buttonContinue2-transaction-details"
               style={{ backgroundColor: "red", width: "200px" }}
               onClick={() => {
                 saveDataToLocalStorage(false);
@@ -121,7 +145,16 @@ const Transaction = ({
                 audio.play();
               }}
             >
-              <h1 style={{color : "white", display: "flex" , justifyContent: "center", alignItems: "center"}}>-</h1>
+              <h1
+                style={{
+                  color: "white",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                -
+              </h1>
             </button>
           </div>
         </div>

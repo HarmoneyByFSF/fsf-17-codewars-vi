@@ -65,26 +65,26 @@ const BalanceCard = ({ isBalanceNew, setBalanceNew }) => {
   // const expense = formatNumberWithCommas("8545.00");
 
   return (
-    <div id="cardContainer" class="position-relative animated zoomIn">
-      <img class="img-fluid" src={balanceCardBackground} alt="" />
-      <div class="bottom-left">
+    <div id="cardContainer" className="position-relative animated zoomIn">
+      <img className="img-fluid" src={balanceCardBackground} alt="" />
+      <div className="bottom-left">
         <p id="incomeLabel">Income</p>
         <p id="bottomLeft">{`Rs ${income}`}</p>
       </div>
-      <div class="center-bottom"></div>
-      <div class="top-left">
+      <div className="center-bottom"></div>
+      <div className="top-left">
         <p id="topLeft">Balance</p>
       </div>
-      <div class="image-top-right">
+      <div className="image-top-right">
         {/* <img src={editBtn} alt="Edit" /> */}
         <BalanceInputModal setCount={setCount} count={count} />
       </div>
-      <div class="bottom-right">
+      <div className="bottom-right">
         <p id="expenseLabel">Expenses</p>
         <p id="bottomRight">{`Rs ${expense}`}</p>
       </div>
-      <div class="centered">
-        <p id="centered" style={{color: "white"}}>{`Rs${balance}`}</p>
+      <div className="centered">
+        <p id="centered" style={{ color: "white" }}>{`Rs${balance}`}</p>
       </div>
     </div>
   );

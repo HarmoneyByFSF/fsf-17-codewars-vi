@@ -48,47 +48,47 @@ const BuyStock = ({ visible, setVisible }) => {
   return (
     <div>
       {/* <button onClick={() => setOpenSuccess(true)}>Show Pop-up</button> */}
-      {/* <button class="circle-button" onClick={() => setOpenSuccess(true)}>
-        <i class="fas fa-plus"></i>
+      {/* <button className="circle-button" onClick={() => setOpenSuccess(true)}>
+        <i className="fas fa-plus"></i>
       </button> */}
       <div
         id="popup-containerM"
-        class="popup-containerM"
+        className="popup-containerM"
         style={{ display: visible ? "flex" : "none" }}
       >
-        <div class="popup-content">
-          <div class="close-button" onClick={() => setVisible(false)}>
+        <div className="popup-content">
+          <div className="close-button" onClick={() => setVisible(false)}>
             &#x2716;
           </div>
 
           <img src={rogers} />
 
-          <h3 class="popup-title" style={{ color: "#484848" }}>
+          <h3 className="popup-title" style={{ color: "#484848" }}>
             Rs29.75
           </h3>
-          <h3 class="popup-title1" style={{ color: "#484848" }}>
+          <h3 className="popup-title1" style={{ color: "#484848" }}>
             Buy: Rs29.75
           </h3>
-          <h3 class="popup-title1" style={{ color: "#484848" }}>
+          <h3 className="popup-title1" style={{ color: "#484848" }}>
             Sell: Rs25.45
           </h3>
-          <h3 class="popup-title1" style={{ color: "#484848" }}>
+          <h3 className="popup-title1" style={{ color: "#484848" }}>
             Previous Price: Rs28.00
           </h3>
-          <h3 class="popup-title" style={{ color: "#484848" }}>
+          <h3 className="popup-title" style={{ color: "#484848" }}>
             Quantity :{" "}
           </h3>
           <input
-            class="expense-textfield"
+            className="expense-textfield"
             type="text"
             id="Quantity"
             placeholder="quantity"
           />
           <br />
 
-          <div class="button-container">
-            <button class="buttonContinue">Buy</button>
-            <button class="buttonContinue">Sell</button>
+          <div className="button-container">
+            <button className="buttonContinue">Buy</button>
+            <button className="buttonContinue">Sell</button>
           </div>
         </div>
       </div>

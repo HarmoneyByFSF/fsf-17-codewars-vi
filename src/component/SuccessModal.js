@@ -25,31 +25,31 @@ const SuccessModal = () => {
 
       <div
         id="popup-container"
-        class="popup-container"
+        className="popup-container"
         style={{ display: openSuccess ? "flex" : "none" }}
       >
         <Confetti width={width} height={height} />
 
-        <div class="popup-content">
-          <div class="close-button" onClick={() => setOpenSuccess(false)}>
+        <div className="popup-content">
+          <div className="close-button" onClick={() => setOpenSuccess(false)}>
             &#x2716;
           </div>
-          <h2 class="popup-title" style={{ color: "#484848" }}>
+          <h2 className="popup-title" style={{ color: "#484848" }}>
             Course Completed
           </h2>
 
-          <img class="popup-image" src={target} />
-          <p class="popup-subtitle" style={{ color: "#9D9D9D" }}>
+          <img className="popup-image" src={target} />
+          <p className="popup-subtitle" style={{ color: "#9D9D9D" }}>
             You completed the basic of Insurance
           </p>
 
-          <div class="popup-price">
-            <img class="dollar-image" src={coin} />
+          <div className="popup-price">
+            <img className="dollar-image" src={coin} />
             <p style={{ margin: 0 }}>15 Tokens</p>
           </div>
 
           <button
-            class="buttonContinue"
+            className="buttonContinue"
             onClick={() => {
               setOpenSuccess(false);
             }}

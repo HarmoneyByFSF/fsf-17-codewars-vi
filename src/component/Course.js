@@ -48,10 +48,10 @@ const Course = () => {
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div style={{ paddingBottom: "10px" }}>
           <div
-            class="learnmore-container"
+            className="learnmore-container"
             style={{ height: "200px", backgroundColor: "#F985AF" }}
           >
-            <div class="learnmore-price">Free</div>
+            <div className="learnmore-price">Free</div>
 
             <img
               className="learnmore-image"
@@ -59,18 +59,18 @@ const Course = () => {
               alt="Expense Image"
             />
 
-            <div class="learnmore-title">What is</div>
+            <div className="learnmore-title">What is</div>
 
-            <div class="learnmore-title">Insurance?</div>
+            <div className="learnmore-title">Insurance?</div>
           </div>
         </div>
 
         <div style={{ paddingBottom: "20px" }}>
           <div
-            class="learnmore-container"
+            className="learnmore-container"
             style={{ height: "200px", backgroundColor: "#F5F2FF" }}
           >
-            <div class="learnmore-price">25 tokens</div>
+            <div className="learnmore-price">25 tokens</div>
 
             <img
               className="learnmore-image"
@@ -79,11 +79,11 @@ const Course = () => {
             />
 
             <p></p>
-            <div class="learnmore-title" style={{ color: "#535353" }}>
+            <div className="learnmore-title" style={{ color: "#535353" }}>
               Investing in
             </div>
 
-            <div class="learnmore-title" style={{ color: "#535353" }}>
+            <div className="learnmore-title" style={{ color: "#535353" }}>
               Stock Market
             </div>
           </div>
@@ -91,7 +91,7 @@ const Course = () => {
       </div>
 
       <div>
-        {/* <div class="container">
+        {/* <div className="container">
           <img
             className="expense-image"
             style={{ height: "60px", width: "60px" }}
@@ -99,15 +99,15 @@ const Course = () => {
             alt="Expense Image"
             onClick={() => openPopup("https://youtu.be/SS-0dXz98Xo")}
           />
-          <div class="text-container" style={{ paddingLeft: "30px" }}>
-            <h2 class="title">
+          <div className="text-container" style={{ paddingLeft: "30px" }}>
+            <h2 className="title">
               FSC Reflexes Ep 1 - Financial Education Mauritius
             </h2>
-            <p class="subtitle">Planning your expenses</p>
+            <p className="subtitle">Planning your expenses</p>
           </div>
         </div> */}
 
-        <div class="container">
+        <div className="container">
           <img
             className="expense-image"
             style={{ height: "60px", width: "60px" }}
@@ -120,15 +120,15 @@ const Course = () => {
             }}
             href=""
           />
-          <div class="text-container" style={{ paddingLeft: "30px" }}>
-            <h2 class="title">
+          <div className="text-container" style={{ paddingLeft: "30px" }}>
+            <h2 className="title">
               FSC Reflexes Ep 1 - Financial Education Mauritius
             </h2>
-            <p class="subtitle">Balancing life and work</p>
+            <p className="subtitle">Balancing life and work</p>
           </div>
         </div>
 
-        <div class="container">
+        <div className="container">
           <img
             className="expense-image"
             style={{ height: "60px", width: "60px" }}
@@ -136,15 +136,15 @@ const Course = () => {
             alt="Expense Image"
             onclick="openPopup('https://youtu.be/SS-0dXz98Xo')"
           />
-          <div class="text-container" style={{ paddingLeft: "30px" }}>
-            <h2 class="title">
+          <div className="text-container" style={{ paddingLeft: "30px" }}>
+            <h2 className="title">
               FSC Reflexes Ep 2 - Financial Education Mauritius
             </h2>
-            <p class="subtitle">Pension Scheme</p>
+            <p className="subtitle">Pension Scheme</p>
           </div>
         </div>
 
-        <div class="container">
+        <div className="container">
           <img
             className="expense-image"
             style={{ height: "60px", width: "60px" }}
@@ -152,18 +152,18 @@ const Course = () => {
             alt="Expense Image"
             onclick="openPopup('https://youtu.be/SS-0dXz98Xo')"
           />
-          <div class="text-container" style={{ paddingLeft: "30px" }}>
-            <h2 class="title">
+          <div className="text-container" style={{ paddingLeft: "30px" }}>
+            <h2 className="title">
               FSC Reflexes Ep 3 - Financial Education Mauritius
             </h2>
-            <p class="subtitle">Investment and interest</p>
+            <p className="subtitle">Investment and interest</p>
           </div>
         </div>
 
-        {/* <div id="popup" class="popup" onclick="closePopup()">
-          <div class="popup-content" onclick="event.stopPropagation()">
+        {/* <div id="popup" className="popup" onclick="closePopup()">
+          <div className="popup-content" onclick="event.stopPropagation()">
             <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-            <span class="close-button" onclick="closePopup()">Close</span>
+            <span className="close-button" onclick="closePopup()">Close</span>
           </div>
         </div> */}
       </div>
