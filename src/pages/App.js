@@ -142,8 +142,10 @@ function App() {
               sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
             ></Box>
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                {/* Replace the IconButton with three FSC images */}
+  <Tooltip title="Open settings">
+    {/* Replace the IconButton with three FSC images */}
+    
+    
 
                 <div style={{ position: "relative", display: "inline-block" }}>
                   <img

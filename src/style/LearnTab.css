@@ -36,6 +36,10 @@ body {
     margin: 3rem 0;
     /* background: #1abc9c; */
     height: 14.75rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    border-radius: 15px;
 }
 
 .tabss::before,
@@ -57,7 +61,7 @@ body {
 }
 
 .tab-label {
-    position: relative;
+    
     display: block;
     line-height: 2.75em;
     /* height: 3em; */
@@ -68,6 +72,8 @@ body {
     cursor: pointer;
     top: 0;
     transition: all 0.25s;
+    width: 125%;
+    border-radius: 15px;
 }
 
 .tab-label:hover {
@@ -78,7 +84,7 @@ body {
 .loading-bar {
     width: 95%;
     height: 10px;
-    background-color: #EDEDED;
+    background-color: #afafaf;
     border-radius: 5px;
     overflow: hidden;
   }

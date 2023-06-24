@@ -63,6 +63,7 @@
     position: absolute;
     top: 20px;
     left: 45px;
+    font-weight: bold;
 }
 
 /* Top right text */
@@ -85,6 +86,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 
@@ -93,23 +95,22 @@
 .scrollable-container-investment-page {
     overflow-y: auto;
     overflow-x: hidden;
-    /* Add this line to hide the horizontal scrollbar */
     max-height: 500px;
     padding: 20px;
-}
-
-.scrollable-container--investment-page::-webkit-scrollbar {
-    width: 8px;
-}
-
-.scrollable-container-investment-page::-webkit-scrollbar-thumb {
-    background-color: #8D64FF;
-}
-
-.scrollable-container-investment-page::-webkit-scrollbar-track {
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar {
+    width: 6px; /* Reduce the width of the scrollbar */
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar-thumb {
+    background-color: #8D64FF; /* Set the background color of the thumb */
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar-track {
     background-color: transparent;
-}
-
+  }
+  
 
 .container-stock-investment-page {
     width: 100%;

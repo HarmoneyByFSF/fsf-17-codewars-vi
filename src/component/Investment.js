@@ -1,5 +1,5 @@
 import React from "react";
-import balanceCardBackground from "../img/balanceCard.png";
+import balanceCardBackground from "../img/investment_card.png";
 import editBtn from "../img/edit.png";
 import alteoIcon from "../img/Alteo.png";
 import enlIcon from "../img/enl.png";
@@ -26,20 +26,20 @@ const Investment = ({ setVisible }) => {
           style={{ width: "100%" }}
         />
         <div class="bottom-left-investment-page">
-          <p id="incomeLabel">Income</p>
-          <p id="bottomLeft">Rs 3455</p>
+          <p id="incomeLabel">Spent</p>
+          <p id="bottomLeft">Rs 18,000.00</p>
         </div>
         <div className="center-bottom-investment-page"></div>
         <div className="top-left-investment-page">
-          <p id="topLeft-investment-page">Balance</p>
+          <p id="topLeft-investment-page">Free Fund</p>
         </div>
         <div className="bottom-right-investment-page">
-          <p id="expenseLabel">Expenses</p>
-          <p id="bottomRight">Rs 4500</p>
+          <p id="expenseLabel">Portfolio</p>
+          <p id="bottomRight">Rs 8,750.00</p>
         </div>
-        <div className="centered-investment-page">
-          <p id="centered" style={{ color: "white" }}>
-            Rs 50000
+        <div className="centered-investment-page" >
+          <p id="centered" style={{ color: "white", fontSize : "40px" }}>
+            Rs 24,000
           </p>
         </div>
       </div>
@@ -93,9 +93,9 @@ const Investment = ({ setVisible }) => {
         <div className="stock-container-investment-page">
           <div
             className="stock-row-investment-page"
-            onClick={() => {
-              setVisible(true);
-            }}
+            // onClick={() => {
+              // setVisible(true);
+            // }}
           >
             <img
               className="stock-image-investment-page"

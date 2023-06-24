@@ -49,7 +49,7 @@ const BankCard = ({ setVisible, isTransactionNew, setIsTransaction }) => {
         <p id="transaction">Transaction</p>
         <div className="transactions">
           {items?.map((trn, index) => (
-            <div className="transactions-container">
+            <div className="transactions-container" style={{width:'200%'}}>
               <div className="transactions-details">
                 <p id="transaction-title" style={{ color: "#939393" }}>
                   {trn.name}
