@@ -18,7 +18,7 @@ const Investment = ({ setVisible }) => {
     <div className="scrollable-container-investment-page">
 
       <div id="cardContainer-investment-page" class="position-relative animated zoomIn" >
-        <img class="img-fluid-investment-page" src={balanceCardBackground} alt="" style={{width : "60%"}}/>
+        <img class="img-fluid-investment-page" src={balanceCardBackground} alt="" style={{width : "100%"}}/>
         <div class="bottom-left-investment-page">
           <p id="incomeLabel">Income</p>
           <p id="bottomLeft">Rs 3455</p>

@@ -48,21 +48,21 @@
 }
 
 #centered-investment-page {
-    font-size: 32px;
+    font-size: 40px;
 }
 
 /* Bottom left text */
 .bottom-left-investment-page {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 30px;
+    left: 60px;
 }
 
 /* Top left text */
 .top-left-investment-page {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 45px;
 }
 
 /* Top right text */
@@ -75,8 +75,8 @@
 /* Bottom right text */
 .bottom-right-investment-page {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 60px;
 }
 
 /* Centered text */
