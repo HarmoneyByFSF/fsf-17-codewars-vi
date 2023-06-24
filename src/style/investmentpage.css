@@ -1,13 +1,11 @@
 /* Container holding the image and the text */
-
-
-.bottom-left {
+/* Container holding the image and the text */
+.bottom-left-investmentpage {
     padding-bottom: 10px;
     padding-left: 10px;
 }
 
-
-.center-bottom {
+.center-bottom-investmentpage {
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -17,116 +15,138 @@
     background-color: white;
 }
 
-.top-left {
+.top-left-investment-page {
     padding-top: 10px;
     padding-left: 10px;
 }
 
-.image-top-right {
+.image-top-right-investment-page {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-.image-top-right img {
+.image-top-right-investment-page img {
     height: 30px;
     width: 30px;
 }
 
-.bottom-right {
+.bottom-right-investment-page {
     padding-bottom: 10px;
     padding-right: 10px;
 }
 
-#incomeLabel,
-#expenseLabel,
-#bottomLeft,
-#topLeft,
-#topRight,
-#bottomRight,
-#centered {
+#incomeLabel-investment-page,
+#expenseLabel-investment-page,
+#bottomLeft-investment-page,
+#topLeft-investment-page,
+#topRight-investment-page,
+#bottomRight-investment-page{
     font-family: Poppins;
     font-size: 18px;
     color: white;
 }
 
-#centered {
-    font-size: 35px;
+#centered-investment-page {
+    font-size: 32px;
 }
 
 /* Bottom left text */
-.bottom-left {
+.bottom-left-investment-page {
     position: absolute;
     bottom: 10px;
     left: 10px;
 }
 
 /* Top left text */
-.top-left {
+.top-left-investment-page {
     position: absolute;
     top: 10px;
     left: 10px;
 }
 
 /* Top right text */
-.top-right {
+.top-right-investment-page {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
 /* Bottom right text */
-.bottom-right {
+.bottom-right-investment-page {
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
 
 /* Centered text */
-.centered {
+.centered-investment-page {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.container-stock{
+
+
+
+.scrollable-container-investment-page {
+    overflow-y: auto;
+    overflow-x: hidden; /* Add this line to hide the horizontal scrollbar */
+    max-height: 300px;
+    padding: 20px;
+  }
+  
+  .scrollable-container--investment-page::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar-thumb {
+    background-color: #8D64FF;
+  }
+  
+  .scrollable-container-investment-page::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+
+.container-stock-investment-page{
     width: 100%;
     padding: 3px;
 }
 
-.stock-container {
+.stock-container-investment-page {
     position: relative;
     background-color: #e8e7e7;
     border-radius: 35px;
     padding: 10px;
 }
 
-.stock-row {
+.stock-row-investment-page {
     display: flex;
     align-items: center;
     position: relative;
     z-index: 3;
 }
 
-.stock-image {
+.stock-image-investment-page {
     width: auto;
     height: auto;
     object-fit: cover;
     margin-right: auto;
 }
 
-.stock-price {
+.stock-price-investment-page {
     font-size: 20px;
     margin-left: auto;
 }
 
-.stock-lock-container {
+.stock-lock-container-investment-page {
     position: relative;
 
 }
 
-.overlay {
+.overlay-investment-page {
     position: absolute;
     top: 0;
     left: 0;
@@ -134,15 +154,14 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    display: none;
     border-radius: 35px;
 }
 
-.stock-lock-container.locked .overlay {
+.stock-lock-container-investment-page.locked .overlay {
     display: block;
 }
 
-.lock-content {
+.lock-content-investment-page {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -152,7 +171,7 @@
     color: #ffffff;
 }
 
-.lock-image {
+.lock-image-investment-page {
     width: 35px;
     height: 35px;
     object-fit: cover;

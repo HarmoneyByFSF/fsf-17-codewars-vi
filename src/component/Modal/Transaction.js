@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../../style/SavingModal.css";
+import "../../style/Transaction.css";
 import successSound from "../../music/treasure.mp3";
 
 const Transaction = ({
@@ -61,48 +61,48 @@ const Transaction = ({
   return (
     <div>
       <div
-        id="popup-containerM"
-        class="popup-containerM"
+        id="popup-container-transaction-details"
+        class="popup-container-transaction-details"
         style={{ display: visible ? "flex" : "none" }}
       >
-        <div class="popup-content">
-          <div class="close-button" onClick={() => setVisible(false)}>
+        <div class="popup-content-transaction-details">
+          <div class="close-button-transaction-details" onClick={() => setVisible(false)}>
             &#x2716;
           </div>
 
-          <h3 class="popup-title" style={{ color: "#484848" }}>
+          <h3 class="popup-title-transaction-details" style={{ color: "#484848" }}>
             Add Transactions
           </h3>
-          <h3 class="popup-title2" style={{ color: "#484848" }}>
+          <h3 class="popup-title2-transaction-details" style={{ color: "#484848" }}>
             Name:
           </h3>
           <input
-            class="expense-textfield"
+            class="expense-textfield-transaction-details"
             type="text"
             id="Quantity"
             placeholder="Name of Transactions"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <h3 class="popup-title2" style={{ color: "#484848" }}>
+          <h3 class="popup-title2-transaction-details" style={{ color: "#484848" }}>
             Amount:
           </h3>
           <input
-            class="expense-textfield"
+            class="expense-textfield-transaction-details"
             type="text"
             id="Quantity"
             placeholder="Amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
-          <h3 class="popup-title1" style={{ color: "#797979" }}>
+          <h3 class="popup-title1-transaction-details" style={{ color: "#797979" }}>
             A transaction can be an addition to the balance or an expenses.
             Please click the correct button below
           </h3>
 
-          <div class="button-containerr">
+          <div class="button-containerr-transaction-details">
             <button
-              class="buttonContinue"
+              class="buttonContinue-transaction-details"
               style={{ backgroundColor: "green" }}
               onClick={() => {
                 saveDataToLocalStorage(true);
@@ -110,10 +110,10 @@ const Transaction = ({
                 audio.play();
               }}
             >
-              <h1>+</h1>
+              <h1 style={{color : "white", display: "flex" , justifyContent: "center", alignItems: "center"}}>+</h1>
             </button>
             <button
-              class="buttonContinue2"
+              class="buttonContinue2-transaction-details"
               style={{ backgroundColor: "red", width: "200px" }}
               onClick={() => {
                 saveDataToLocalStorage(false);
@@ -121,7 +121,7 @@ const Transaction = ({
                 audio.play();
               }}
             >
-              <h1>-</h1>
+              <h1 style={{color : "white", display: "flex" , justifyContent: "center", alignItems: "center"}}>-</h1>
             </button>
           </div>
         </div>

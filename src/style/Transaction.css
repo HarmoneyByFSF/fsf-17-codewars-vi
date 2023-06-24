@@ -22,7 +22,7 @@
      background-color: #f0faff;
  }
 
- .buttonContinue {
+ .buttonContinue-transaction-details {
      position: relative;
      padding: 10px 62px;
      border-radius: 6px;
@@ -36,7 +36,7 @@
      /* Added margin-top */
  }
 
- .buttonContinue2 {
+ .buttonContinue2-transaction-details {
      position: relative;
      padding: 10px 62px;
      border-radius: 6px;
@@ -50,16 +50,16 @@
      /* Added margin-top */
  }
 
- .buttonContinue:active {
+ .buttonContinue-transaction-details:active {
      transform: scale(0.96);
  }
 
- .buttonContinue2:active {
+ .buttonContinue2-transaction-details:active {
      transform: scale(0.96);
  }
 
- .buttonContinue:before,
- .buttonContinue:after {
+ .buttonContinue-transaction-details:before,
+ .buttonContinue-transaction-details:after {
      position: absolute;
      content: "";
      width: 150%;
@@ -70,8 +70,8 @@
      background-repeat: no-repeat;
  }
 
- .buttonContinue2:before,
- .buttonContinue2:after {
+ .buttonContinue2-transaction-details:before,
+ .buttonContinue2-transaction-details:after {
      position: absolute;
      content: "";
      width: 150%;
@@ -82,7 +82,7 @@
      background-repeat: no-repeat;
  }
 
- .buttonContinue.animate::before {
+ .buttonContinue-transaction-details.animate::before {
      top: -70%;
      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
          radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -96,7 +96,7 @@
      animation: greentopBubbles ease-in-out 0.6s forwards infinite;
  }
 
- .buttonContinue2.animate::before {
+ .buttonContinue2-transaction-details.animate::before {
      top: -70%;
      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
          radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -128,7 +128,7 @@
      }
  }
 
- .buttonContinue.animate::after {
+ .buttonContinue-transaction-details.animate::after {
      bottom: -70%;
      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
          radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -141,7 +141,7 @@
      animation: greenbottomBubbles ease-in-out 0.6s forwards infinite;
  }
 
- .buttonContinue2.animate::after {
+ .buttonContinue2-transaction-details.animate::after {
      bottom: -70%;
      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
          radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -172,7 +172,7 @@
      }
  }
 
- .popup-container {
+ .popup-container-transaction-details {
      display: none;
      position: fixed;
      top: 0;
@@ -185,7 +185,7 @@
      align-items: center;
  }
 
- .popup-content {
+ .popup-content-transaction-details {
      background-color: #fff;
      border-radius: 10px;
      padding: 20px;
@@ -196,22 +196,22 @@
      /* Add position relative */
  }
 
- .popup-title {
+ .popup-title-transaction-details {
      margin-bottom: 10px;
  }
 
- .popup-title {
+ .popup-title-transaction-details {
      margin-bottom: 10px;
  }
 
- .popup-subtitle {
+ .popup-subtitle-transaction-details {
      font-size: 18px;
      margin-left: auto;
      color: #2F2F2F;
      font-weight: 500;
  }
 
- .popup-button {
+ .popup-button-transaction-details {
      background-color: #4caf50;
      color: #fff;
      border: none;
@@ -223,7 +223,7 @@
      /* Added margin-top */
  }
 
- .close-button {
+ .close-button-transaction-details {
      position: absolute;
      top: 10px;
      right: 10px;
@@ -237,7 +237,7 @@
      cursor: pointer;
  }
 
- .expense-textfield {
+ .expense-textfield-transaction-details {
      padding: 10px;
      border-color: #B1B1B1;
      border-radius: 5px;
@@ -246,18 +246,18 @@
      margin-top: 5px;
  }
 
- .button-containerr {
+ .button-containerr-transaction-details {
      display: flex;
      /* align-items: center;
      gap: 20px; */
  }
 
- .buttonContinue {
+ .buttonContinue-transaction-details {
      margin-right: 10px;
      background-color: red;
  }
 
- .buttonContinue2 {
+ .buttonContinue2-transaction-details {
      margin-right: 10px;
      background-color: green;
  }

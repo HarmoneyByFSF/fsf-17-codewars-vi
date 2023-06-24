@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import balanceCardBackground from "../img/balanceCard.png";
 import editBtn from "../img/edit.png";
-import "../style/investmentpage.css";
+import "../style/balanceCard.css";
 import BalanceInputModal from "./Modal/balanceInputModal";
 
 const BalanceCard = ({ isBalanceNew, setBalanceNew }) => {
@@ -84,7 +84,7 @@ const BalanceCard = ({ isBalanceNew, setBalanceNew }) => {
         <p id="bottomRight">{`Rs ${expense}`}</p>
       </div>
       <div class="centered">
-        <p id="centered">{`Rs${balance}`}</p>
+        <p id="centered" style={{color: "white"}}>{`Rs${balance}`}</p>
       </div>
     </div>
   );

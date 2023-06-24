@@ -30,9 +30,9 @@ const Saving = ({ setVisible, isSavingNew, setIsSavingNew }) => {
 
               <div class="savinggoal-date">{saving.date}</div>
 
-              <div class="savinggoal-price">{saving.amount}</div>
+              <div class="savinggoal-price"> Rs {saving.amount}</div>
 
-              <img src={tick} class="savinggoal-image" alt="" />
+              <img src={blank} class="savinggoal-image" alt="" />
             </div>
           ))}
 
@@ -79,24 +79,27 @@ const Saving = ({ setVisible, isSavingNew, setIsSavingNew }) => {
           </div> */}
         </div>
 
-        <p style={{ fontSize: "20px", fontWeight: "400", color: "black" }}>
-          Tip
-        </p>
+        <div style={{paddingTop : "50px"}}>
+          <p style={{ fontSize: "20px", fontWeight: "400", color: "black" }}>
+            Tip
+          </p>
 
-        <div class="rowd">
-          <div class="tipstext">
-            <span>
-              Have a clear picture of the regular expenses <br></br> and
-              spending habits.<br></br>
-              This helps you see where you can <br></br>
-              cut back and save.
-            </span>
+          <div class="rowd">
+            <div class="tipstext">
+              <span>
+                Have a clear picture of the regular expenses <br></br> and
+                spending habits.<br></br>
+                This helps you see where you can <br></br>
+                cut back and save.
+              </span>
+            </div>
+            <div class="addbutton" onClick={() => setVisible(true)}>
+              <button class="circle-button">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
           </div>
-          <div class="addbutton" onClick={() => setVisible(true)}>
-            <button class="circle-button">
-              <i class="fas fa-plus"></i>
-            </button>
-          </div>
+
         </div>
       </div>
     </div>

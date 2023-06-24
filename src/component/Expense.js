@@ -38,7 +38,7 @@ const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
                 <div className="expense-due-date-expense-card">Due Date: 2 July 2023</div>
               </div>
               <div className="expense-row-expense-card">
-                <div className="expense-alarm-expense-card">Alarm: 1 July 2023</div>
+                <div className="expense-alarm-expense-card" style={{color : "black" , fontWeight: "500"}}>Amount: Rs {expenses.amount}</div>
               </div>
               {/* <div className="expense-row1">
                 <img
