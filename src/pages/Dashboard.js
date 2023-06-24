@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style/dashboard.css";
 import prt from "../img/card1.png";
 import streak from "../img/streak.png";
 import skill from "../img/skill.png";
 import visa from "../img/visa.png";
-import BalanceCard from "../component/balanceCard";
-import StreakCard from "../component/streakCard";
-import Tab from "../component/tab";
+import BalanceCard from "../component/BalanceCard";
+import StreakCard from "../component/StreakCard";
+import Tab from "../component/Tab";
 import LearnTab from "../component/LearnTab";
 
-const Dashboard = () => {
+const Dashboard = ({ isCoinNew, setCoinNew }) => {
   const [isBalanceNew, setBalanceNew] = useState(0);
 
   return (
@@ -23,7 +23,7 @@ const Dashboard = () => {
         </div>
         <div id="item-1">
           {/* <img src={streak} style={{ width: "100%", borderRadius: "20px" }} /> */}
-          <StreakCard />
+          <StreakCard isCoinNew={isCoinNew} setCoinNew={setCoinNew} />
         </div>
         <div id="item-2">
           {/* <img src={skill} style={{ width: "100%", borderRadius: "20px" }} /> */}

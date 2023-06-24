@@ -132,10 +132,6 @@ const ExpenseModal = ({
           >
             Add Expense
           </button>
-
-          {/* <script type="text/javascript">
-                
-            </script> */}
         </div>
       </div>
     </div>

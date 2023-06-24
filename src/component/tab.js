@@ -8,7 +8,6 @@ import SavingModal from "./Modal/SavingModal";
 import Transaction from "./Modal/Transaction";
 
 const Tab = ({ isBalanceNew, setBalanceNew }) => {
-  const [tabNum, setTabNum] = useState(0);
   const [openExpenseModal, setOpenExpenseModal] = useState(false);
   const [openSavingModal, setOpenSavingModal] = useState(false);
   const [openTransactionModal, setOpenTransactionModal] = useState(false);

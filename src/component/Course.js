@@ -91,22 +91,6 @@ const Course = () => {
       </div>
 
       <div>
-        {/* <div className="container">
-          <img
-            className="expense-image"
-            style={{ height: "60px", width: "60px" }}
-            src={video}
-            alt="Expense Image"
-            onClick={() => openPopup("https://youtu.be/SS-0dXz98Xo")}
-          />
-          <div className="text-container" style={{ paddingLeft: "30px" }}>
-            <h2 className="title">
-              FSC Reflexes Ep 1 - Financial Education Mauritius
-            </h2>
-            <p className="subtitle">Planning your expenses</p>
-          </div>
-        </div> */}
-
         <div className="container">
           <img
             className="expense-image"
@@ -159,13 +143,6 @@ const Course = () => {
             <p className="subtitle">Investment and interest</p>
           </div>
         </div>
-
-        {/* <div id="popup" className="popup" onclick="closePopup()">
-          <div className="popup-content" onclick="event.stopPropagation()">
-            <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-            <span className="close-button" onclick="closePopup()">Close</span>
-          </div>
-        </div> */}
       </div>
     </div>
   );

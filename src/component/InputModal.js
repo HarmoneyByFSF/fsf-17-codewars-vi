@@ -44,14 +44,6 @@ const InputModal = () => {
     console.log(Array.isArray(existingData));
   }
 
-  //   button.addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     button.classList.add("animate");
-  //     setTimeout(() => {
-  //       button.classList.remove("animate");
-  //     }, 600);
-  //   });
-
   return (
     <div>
       <button onClick={() => setOpenSuccess(true)}>Show Pop-up</button>
@@ -116,10 +108,6 @@ const InputModal = () => {
           >
             Add Expense
           </button>
-
-          {/* <script type="text/javascript">
-                    
-                </script> */}
         </div>
       </div>
     </div>

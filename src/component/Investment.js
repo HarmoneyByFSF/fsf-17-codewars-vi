@@ -10,7 +10,7 @@ import terraIcon from "../img/terra.png";
 import mcbIcon from "../img/mcb.png";
 import rogersIcon from "../img/rogers.png";
 import lockIcon from "../img/Lock_icon.png";
-import "../style/investmentpage.css";
+import "../style/balanceCard.css";
 
 const Investment = ({ setVisible }) => {
   return (
@@ -50,96 +50,72 @@ const Investment = ({ setVisible }) => {
         </p>
       </div>
 
-      <div className="container-stock-investment-page">
-        <div className="stock-container-investment-page">
-          <div className="stock-row-investment-page">
-            <img
-              className="stock-image-investment-page"
-              src={alteoIcon}
-              alt=""
-            />
-            <div className="stock-price-investment-page">Rs 8.20</div>
+      <div class="container-stock">
+        <div class="stock-container">
+          <div class="stock-row">
+            <img class="stock-image" src={alteoIcon} alt="" />
+            <div class="stock-price">Rs 8.20</div>
           </div>
         </div>
       </div>
 
-      <div className="container-stock-investment-page">
-        <div className="stock-container-investment-page">
-          <div className="stock-row-investment-page">
-            <img
-              className="stock-image-investment-page"
-              src={moroilIcon}
-              alt=""
-            />
-            <div className="stock-price-investment-page">Rs 17.75</div>
+      <div class="container-stock">
+        <div class="stock-container">
+          <div class="stock-row">
+            <img class="stock-image" src={moroilIcon} alt="" />
+            <div class="stock-price">Rs 17.75</div>
           </div>
         </div>
       </div>
 
-      <div className="container-stock-investment-page">
-        <div className="stock-container-investment-page">
-          <div className="stock-row-investment-page">
-            <img
-              className="stock-image-investment-page"
-              src={terraIcon}
-              alt=""
-            />
-            <div className="stock-price-investment-page">Rs 22.00</div>
+      <div class="container-stock">
+        <div class="stock-container">
+          <div class="stock-row">
+            <img class="stock-image" src={terraIcon} alt="" />
+            <div class="stock-price">Rs 22.00</div>
           </div>
         </div>
       </div>
 
-      <div className="container-stock-investment-page">
-        <div className="stock-container-investment-page">
+      <div class="container-stock">
+        <div class="stock-container">
           <div
-            className="stock-row-investment-page"
+            class="stock-row"
             onClick={() => {
               setVisible(true);
             }}
           >
-            <img
-              className="stock-image-investment-page"
-              src={rogersIcon}
-              alt=""
-            />
-            <div className="stock-price-investment-page">Rs 29.75</div>
+            <img class="stock-image" src={rogersIcon} alt="" />
+            <div class="stock-price">Rs 29.75</div>
           </div>
         </div>
       </div>
 
-      <div className="container-stock-investment-page">
-        <div className="stock-lock-container-investment-page locked">
-          <div className="overlay-investment-page"></div>
-          <div className="lock-content-investment-page">
-            <img className="lock-image-investment-page" src={lockIcon} alt="" />
+      <div class="container-stock">
+        <div class="stock-lock-container locked">
+          <div class="overlay"></div>
+          <div class="lock-content">
+            <img class="lock-image" src={lockIcon} alt="" />
           </div>
-          <div className="stock-container-investment-page">
-            <div className="stock-row-investment-page">
-              <img
-                className="stock-image-investment-page"
-                src={enlIcon}
-                alt=""
-              />
-              <div className="stock-price-investment-page">Rs 19.50</div>
+          <div class="stock-container">
+            <div class="stock-row">
+              <img class="stock-image" src={enlIcon} alt="" />
+              <div class="stock-price">Rs 19.50</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="container-stock-investment-page">
-        <div className="stock-lock-container-investment-page locked">
-          <div className="overlay-investment-page"></div>
-          <div className="lock-content-investment-page">
-            <img className="lock-image-investment-page" src={lockIcon} alt="" />
+      <div class="container-stock">
+        <div class="stock-lock-container locked">
+          <div class="overlay"></div>
+          <div class="lock-content">
+            <img class="lock-image" src={lockIcon} alt="" />
           </div>
-          <div className="stock-container-investment-page">
-            <div className="stock-row-investment-page">
-              <img
-                className="stock-image-investment-page"
-                src={mcbIcon}
-                alt=""
-              />
-              <div className="stock-price-investment-page">Rs 315.45</div>
+          <div class="stock-container">
+            <div class="stock-row">
+              <img class="stock-image" src={mcbIcon} alt="" />
+              <div class="stock-price">Rs 315.45</div>
             </div>
           </div>
         </div>

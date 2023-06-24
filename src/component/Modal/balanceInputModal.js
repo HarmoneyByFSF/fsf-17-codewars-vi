@@ -11,13 +11,6 @@ const BalanceInputModal = ({ setCount, count }) => {
 
   const [items, setItems] = useState([]);
 
-  //   useEffect(() => {
-  //     const items = JSON.parse(localStorage.getItem("items"));
-  //     if (items) {
-  //       setItems(items);
-  //     }
-  //   }, []);
-
   console.log(items);
 
   const audio = new Audio(successSound);
@@ -25,8 +18,6 @@ const BalanceInputModal = ({ setCount, count }) => {
 
   function saveDataToLocalStorage() {
     const existingData = JSON.parse(localStorage.getItem("Balance"));
-
-    // console.log(Array.isArray(existingData));
 
     const data = {
       balance: balance,
@@ -117,10 +108,6 @@ const BalanceInputModal = ({ setCount, count }) => {
           >
             Save
           </button>
-
-          {/* <script type="text/javascript">
-                    
-                </script> */}
         </div>
       </div>
     </div>

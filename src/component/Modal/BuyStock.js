@@ -39,18 +39,8 @@ const BuyStock = ({ visible, setVisible }) => {
     setOpenSuccess(false);
   }
 
-  function retrieveAllDataFromLocalStorage() {
-    const existingData = JSON.parse(localStorage.getItem("Expenses"));
-
-    console.log(Array.isArray(existingData));
-  }
-
   return (
     <div>
-      {/* <button onClick={() => setOpenSuccess(true)}>Show Pop-up</button> */}
-      {/* <button className="circle-button" onClick={() => setOpenSuccess(true)}>
-        <i className="fas fa-plus"></i>
-      </button> */}
       <div
         id="popup-containerM"
         className="popup-containerM"
