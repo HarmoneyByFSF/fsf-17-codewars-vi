@@ -7,7 +7,7 @@ import editBtn from "../../img/edit.png";
 import coin from "../../img/redeem_coins.png";
 import Confetti from "react-confetti";
 
-const Redeem = () => {
+const Redeem = ({ isCoinNew, setCoinNew }) => {
   const [openSuccess, setOpenSuccess] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -48,6 +48,17 @@ const Redeem = () => {
     localStorage.setItem("Expenses", JSON.stringify(existingData));
     setOpenSuccess(false);
   }
+
+  const reduceCoin = (amount) => {
+    const items = JSON.parse(localStorage.getItem("BalanceCoin"));
+    if (items) {
+      const total = parseInt(items.amount) - amount;
+      localStorage.setItem("BalanceCoin", JSON.stringify({ amount: total }));
+    } else {
+      localStorage.setItem("BalanceCoin", JSON.stringify({ amount: 0 }));
+    }
+    setCoinNew(isCoinNew + 1);
+  };
 
   const { width, height } = 2030;
   return (
@@ -105,6 +116,7 @@ const Redeem = () => {
                   <div className="buy-button">
                     <p
                       onClick={() => {
+                        reduceCoin(34);
                         setShowCode(true);
                         cashingAudio.loop = false;
                         cashingAudio.play();
@@ -130,7 +142,7 @@ const Redeem = () => {
                       style={{ width: "35px", height: "35px" }}
                     />
                     <div className="coins-amount">
-                      <p>{showCode1 ? "Code: cd2" : "15 coins"}</p>
+                      <p>{showCode1 ? "Code:cd2" : "15 coins"}</p>
                     </div>
                   </div>
 
@@ -142,6 +154,7 @@ const Redeem = () => {
                 <div className="buy-button">
                   <p
                     onClick={() => {
+                      reduceCoin(15);
                       setShowCode1(true);
                       cashingAudio.loop = false;
                       cashingAudio.play();
@@ -164,7 +177,7 @@ const Redeem = () => {
                       style={{ width: "35px", height: "35px" }}
                     />
                     <div className="coins-amount">
-                      <p>{showCode2 ? "Code: cd3" : "45 coins"}</p>
+                      <p>{showCode2 ? "Code:cd3" : "45 coins"}</p>
                     </div>
                   </div>
 
@@ -176,6 +189,7 @@ const Redeem = () => {
                 <div className="buy-button">
                   <p
                     onClick={() => {
+                      reduceCoin(45);
                       setShowCode2(true);
                       cashingAudio.loop = false;
                       cashingAudio.play();

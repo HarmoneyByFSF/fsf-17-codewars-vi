@@ -6,7 +6,7 @@ import streak_person from "../img/streak_person.png";
 import streakBack from "../img/streakBack.png";
 import Redeem from "./Modal/Redeem";
 
-const StreakCard = () => {
+const StreakCard = ({ isCoinNew, setCoinNew }) => {
   return (
     <div id="cardContainer" className="position-relative animated zoomIn">
       <img className="img-fluid" src={streakBack} alt="" />
@@ -18,7 +18,7 @@ const StreakCard = () => {
             <p>Way to go!</p>
           </div>
         </div>
-        <Redeem />
+        <Redeem isCoinNew={isCoinNew} setCoinNew={setCoinNew} />
         {/* <div className="button">Redeem</div> */}
         <div className="column-configuration">
           <div clas="streak-days">
