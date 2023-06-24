@@ -1,5 +1,5 @@
 import React from "react";
-import balanceCardBackground from "../img/balanceCard.png";
+import balanceCardBackground from "../img/investment_card.png";
 import editBtn from "../img/edit.png";
 import alteoIcon from "../img/Alteo.png";
 import enlIcon from "../img/enl.png";
@@ -93,9 +93,9 @@ const Investment = ({ setVisible }) => {
         <div className="stock-container-investment-page">
           <div
             className="stock-row-investment-page"
-            onClick={() => {
-              setVisible(true);
-            }}
+            // onClick={() => {
+              // setVisible(true);
+            // }}
           >
             <img
               className="stock-image-investment-page"
