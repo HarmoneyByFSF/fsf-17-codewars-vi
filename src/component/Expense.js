@@ -5,7 +5,7 @@ import ceb from "../img/CEB.png";
 import due from "../img/due.png";
 import paid from "../img/paid.png";
 import ExpenseModal from "./Modal/ExpenseModal";
-const Expense = ({ setVisible }) => {
+const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Expense = ({ setVisible }) => {
       setItems(items);
     }
     console.log(items);
-  }, []);
+  }, [isExpenseNew]);
 
   return (
     <div className="scrollable-container">
@@ -27,7 +27,7 @@ const Expense = ({ setVisible }) => {
             >
               <div className="expense-row">
                 <div className="expense-title">{expenses.Title}</div>
-                {/* <img className="expense-image" src={cwa} alt="Expense Image" /> */}
+                <img className="expense-image" src={cwa} alt="Expense Image" />
               </div>
               <div className="expense-row">
                 <div className="expense-description">
@@ -37,9 +37,9 @@ const Expense = ({ setVisible }) => {
               <div className="expense-row">
                 <div className="expense-due-date">Due Date: 2 July 2023</div>
               </div>
-              {/* <div className="expense-row">
-              <div className="expense-alarm">Alarm: 1 July 2023</div>
-            </div> */}
+              <div className="expense-row">
+                <div className="expense-alarm">Alarm: 1 July 2023</div>
+              </div>
               {/* <div className="expense-row1">
                 <img
                   className="notification-icon"

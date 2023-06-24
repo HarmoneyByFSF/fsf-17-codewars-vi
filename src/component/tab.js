@@ -12,6 +12,8 @@ const Tab = () => {
   const [openExpenseModal, setOpenExpenseModal] = useState(false);
   const [openSavingModal, setOpenSavingModal] = useState(false);
   const [openTransactionModal, setOpenTransactionModal] = useState(false);
+  const [isSavingNew, setIsSavingNew] = useState(0);
+  const [isExpenseNew, setIsExpenseNew] = useState(0);
 
   return (
     <div>
@@ -19,10 +21,14 @@ const Tab = () => {
         <ExpenseModal
           visible={openExpenseModal}
           setVisible={setOpenExpenseModal}
+          isExpenseNew={isExpenseNew}
+          setIsExpenseNew={setIsExpenseNew}
         />
         <SavingModal
           visible={openSavingModal}
           setVisible={setOpenSavingModal}
+          isSavingNew={isSavingNew}
+          setIsSavingNew={setIsSavingNew}
         />
         <Transaction
           visible={openTransactionModal}
@@ -32,7 +38,11 @@ const Tab = () => {
           <input type="radio" id="tabss-2" name="tabby-tabs" checked />
           <label for="tabss-2">My Expenses</label>
           <div class="tabby-content">
-            <Expense setVisible={setOpenExpenseModal} />
+            <Expense
+              setVisible={setOpenExpenseModal}
+              isExpenseNew={isExpenseNew}
+              setIsExpenseNew={setIsExpenseNew}
+            />
           </div>
         </div>
 
@@ -40,7 +50,11 @@ const Tab = () => {
           <input type="radio" id="tabss-3" name="tabby-tabs" />
           <label for="tabss-3">Saving</label>
           <div class="tabby-content">
-            <Saving setVisible={setOpenSavingModal} />
+            <Saving
+              setVisible={setOpenSavingModal}
+              isSavingNew={isSavingNew}
+              setIsSavingNew={setIsSavingNew}
+            />
           </div>
         </div>
 

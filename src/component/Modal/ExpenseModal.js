@@ -2,12 +2,16 @@ import React, { useState, useRef, useEffect } from "react";
 import "../../style/ExpenseModal.css";
 import successSound from "../../music/treasure.mp3";
 
-const ExpenseModal = ({ visible, setVisible }) => {
+const ExpenseModal = ({
+  visible,
+  setVisible,
+  isExpenseNew,
+  setIsExpenseNew,
+}) => {
   const [openSuccess, setOpenSuccess] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
-  const [count, setCount] = useState(0);
 
   const [items, setItems] = useState([]);
 
@@ -16,7 +20,7 @@ const ExpenseModal = ({ visible, setVisible }) => {
     if (items) {
       setItems(items);
     }
-  }, [count]);
+  }, []);
 
   console.log(items);
 
@@ -33,11 +37,17 @@ const ExpenseModal = ({ visible, setVisible }) => {
       description: description,
       amount: amount,
     };
-    existingData.push(data);
+    console.log(Array.isArray(existingData));
+    if (Array.isArray(existingData)) {
+      existingData.push(data);
 
-    localStorage.setItem("Expenses", JSON.stringify(existingData));
+      localStorage.setItem("Expenses", JSON.stringify(existingData));
+    } else {
+      localStorage.setItem("Expenses", JSON.stringify([data]));
+    }
+
     setOpenSuccess(false);
-    setCount(count + 1);
+    setIsExpenseNew(isExpenseNew + 1);
 
     // localStorage.setItem("Expenses", JSON.stringify([]));
   }
