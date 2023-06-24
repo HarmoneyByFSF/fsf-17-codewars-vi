@@ -3,41 +3,44 @@ import "../style/LearnTab.css";
 import video from "../img/Group 88.png";
 import Investment from "./Investment";
 import Course from "./Course";
+import BuyStock from "./Modal/BuyStock";
 
 const LearnTab = () => {
-  function openPopup(videoLink) {
-    var popup = document.getElementById('popup');
-    var videoFrame = document.getElementById('video-frame');
-    videoFrame.src = getEmbedUrl(videoLink);
-    popup.classList.add('active');
-  }
+  const [openBuyModal, setOpenBuyModal] = useState(false);
+  // function openPopup(videoLink) {
+  //   var popup = document.getElementById('popup');
+  //   var videoFrame = document.getElementById('video-frame');
+  //   videoFrame.src = getEmbedUrl(videoLink);
+  //   popup.classList.add('active');
+  // }
 
-  function closePopup() {
-    var popup = document.getElementById('popup');
-    var videoFrame = document.getElementById('video-frame');
-    videoFrame.src = '';
-    popup.classList.remove('active');
-  }
+  // function closePopup() {
+  //   var popup = document.getElementById('popup');
+  //   var videoFrame = document.getElementById('video-frame');
+  //   videoFrame.src = '';
+  //   popup.classList.remove('active');
+  // }
 
-  function getEmbedUrl(videoLink) {
-    var videoId = extractVideoId(videoLink);
-    if (videoId) {
-      return 'https://www.youtube.com/embed/' + videoId;
-    }
-    return '';
-  }
+  // function getEmbedUrl(videoLink) {
+  //   var videoId = extractVideoId(videoLink);
+  //   if (videoId) {
+  //     return 'https://www.youtube.com/embed/' + videoId;
+  //   }
+  //   return '';
+  // }
 
-  function extractVideoId(videoLink) {
-    var regex = /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/;
-    var match = videoLink.match(regex);
-    if (match) {
-      return match[1];
-    } else {
-      return null;
-    }
-  }
+  // function extractVideoId(videoLink) {
+  //   var regex = /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/;
+  //   var match = videoLink.match(regex);
+  //   if (match) {
+  //     return match[1];
+  //   } else {
+  //     return null;
+  //   }
+  // }
   return (
     <div>
+      <BuyStock visible={openBuyModal} setVisible={setOpenBuyModal} />
       <div class="wrapper">
         <div
           style={{
@@ -46,9 +49,13 @@ const LearnTab = () => {
             marginBottom: "-20px",
           }}
         >
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+          <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
             <div style={{ fontSize: "22px", color: "black" }}>Your</div>
-            <div style={{ fontSize: "22px", color: "black", fontWeight: "600" }}>Skills</div>
+            <div
+              style={{ fontSize: "22px", color: "black", fontWeight: "600" }}
+            >
+              Skills
+            </div>
           </div>
 
           <div style={{ paddingTop: "10px" }}>
@@ -84,7 +91,7 @@ const LearnTab = () => {
               Investment Simulation
             </label>
             <div class="tab-content">
-              <Investment />
+              <Investment setVisible={setOpenBuyModal} />
             </div>
           </div>
           {/* <div class="tab">
@@ -107,7 +114,6 @@ const LearnTab = () => {
           </div> */}
         </div>
       </div>
-
     </div>
   );
 };
