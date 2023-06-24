@@ -40,6 +40,7 @@ const SavingModal = ({ visible, setVisible, isSavingNew, setIsSavingNew }) => {
     }
 
     setIsSavingNew(isSavingNew + 1);
+    setVisible(false);
 
     setOpenSuccess(false);
   }
@@ -52,7 +53,10 @@ const SavingModal = ({ visible, setVisible, isSavingNew, setIsSavingNew }) => {
         style={{ display: visible ? "flex" : "none" }}
       >
         <div class="popup-content-saving-details">
-          <div class="close-button-saving-details" onClick={() => setVisible(false)}>
+          <div
+            class="close-button-saving-details"
+            onClick={() => setVisible(false)}
+          >
             &#x2716;
           </div>
 
