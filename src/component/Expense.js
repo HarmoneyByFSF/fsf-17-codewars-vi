@@ -25,16 +25,27 @@ const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
               className="expense-container-expense-card"
               style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
             >
+
               <div className="expense-row-expense-card">
                 <div className="expense-title-expense-card">
                   {expenses.Title}
                 </div>
-                <img
-                  className="expense-image-expense-card"
-                  src={cwa}
-                  alt="Expense Image"
-                />
+                {expenses.Title.toLowerCase().includes("water") ? (
+                  <img
+                    className="expense-image-expense-card"
+                    src={cwa}
+                    alt="CWA Image"
+                  />
+                ) : (
+                  <img style={{width: "100px" , height: "40px"}}
+                    className="expense-image-expense-card"
+                    src={ceb}
+                    alt="Another Image"
+                  />
+                )}
               </div>
+
+
               <div className="expense-row-expense-card">
                 <div className="expense-description-expense-card">
                   {expenses.description}
