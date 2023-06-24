@@ -17,7 +17,7 @@ body {
     background-color: #f0faff;
 }
 
-.buttonContinue {
+.buttonContinue-balance-input-modal {
     position: relative;
     padding: 10px 70px;
     border-radius: 6px;
@@ -30,12 +30,12 @@ body {
     /* Added margin-top */
 }
 
-.buttonContinue:active {
+.buttonContinue-balance-input-modal:active {
     transform: scale(0.96);
 }
 
-.buttonContinue:before,
-.buttonContinue:after {
+.buttonContinue-balance-input-modal:before,
+.buttonContinue-balance-input-modal:after {
     position: absolute;
     content: "";
     width: 150%;
@@ -46,7 +46,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.buttonContinue.animate::before {
+.buttonContinue-balance-input-modal.animate::before {
     top: -70%;
     background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
         radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -78,7 +78,7 @@ body {
     }
 }
 
-.buttonContinue.animate::after {
+.buttonContinue-balance-input-modal.animate::after {
     bottom: -70%;
     background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
         radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -109,7 +109,7 @@ body {
     }
 }
 
-.popup-container {
+.popup-container-balance-input-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -122,7 +122,7 @@ body {
     align-items: center;
 }
 
-.popup-content {
+.popup-content-balance-input-modal {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -133,19 +133,19 @@ body {
     /* Add position relative */
 }
 
-.popup-title {
+.popup-title-balance-input-modal {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.popup-subtitle {
+.popup-subtitle-balance-input-modal {
     font-size: 18px;
     margin-left: auto;
     color: #2F2F2F;
     font-weight: 500;
 }
 
-.popup-button {
+.popup-button-balance-input-modal {
     background-color: #4caf50;
     color: #fff;
     border: none;
@@ -157,7 +157,7 @@ body {
     /* Added margin-top */
 }
 
-.close-button {
+.close-button-balance-input-modal {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -171,7 +171,7 @@ body {
     cursor: pointer;
 }
 
-.expense-textfield {
+.expense-textfield-balance-input-modal {
     padding: 10px;
     border-color: #B1B1B1;
     border-radius: 5px;

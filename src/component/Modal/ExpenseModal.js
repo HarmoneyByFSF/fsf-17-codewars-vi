@@ -61,24 +61,24 @@ const ExpenseModal = ({
   return (
     <div>
       <div
-        id="popup-containerM"
-        class="popup-containerM"
+        id="popup-container-expense-details"
+        class="popup-container-expense-details"
         style={{ display: visible ? "flex" : "none" }}
       >
-        <div class="popup-content">
-          <div class="close-button" onClick={() => setVisible(false)}>
+        <div class="popup-content-expense-details">
+          <div class="close-button-expense-details" onClick={() => setVisible(false)}>
             &#x2716;
           </div>
-          <h2 class="popup-title" style={{ color: "#484848" }}>
+          <h2 class="popup-title-expense-details" style={{ color: "#484848" }}>
             Add Expenses
           </h2>
 
-          <label class="popup-subtitle" style={{ paddingBottom: "-20px" }}>
+          <label class="popup-subtitle-expense-details" style={{ paddingBottom: "-20px" }}>
             Title
           </label>
           <br />
           <input
-            class="expense-textfield"
+            class="expense-textfield-expense-details"
             type=""
             id="text1"
             value={title}
@@ -87,10 +87,10 @@ const ExpenseModal = ({
           />
           <br />
 
-          <label class="popup-subtitle">Description</label>
+          <label class="popup-subtitle-expense-details">Description</label>
           <br />
           <input
-            class="expense-textfield"
+            class="expense-textfield-expense-details"
             type="text"
             id="text2"
             value={description}
@@ -99,10 +99,10 @@ const ExpenseModal = ({
           />
           <br />
 
-          <label class="popup-subtitle">Amount</label>
+          <label class="popup-subtitle-expense-details">Amount</label>
           <br />
           <input
-            class="expense-textfield"
+            class="expense-textfield-expense-details"
             type="text"
             id="text3"
             value={amount}
@@ -112,7 +112,7 @@ const ExpenseModal = ({
           <br />
 
           <button
-            class="buttonContinue"
+            class="buttonContinue-expense-details"
             onClick={() => {
               saveDataToLocalStorage();
               retrieveAllDataFromLocalStorage();

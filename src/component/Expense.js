@@ -17,28 +17,28 @@ const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
   }, [isExpenseNew]);
 
   return (
-    <div className="scrollable-container">
+    <div className="scrollable-container-expense-card">
       <div>
         <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
           {items?.map((expenses, index) => (
             <div
-              className="expense-container"
+              className="expense-container-expense-card"
               style={{ boxShadow: "0px 8px 25px rgba(208, 210, 218, 0.9)" }}
             >
-              <div className="expense-row">
-                <div className="expense-title">{expenses.Title}</div>
-                <img className="expense-image" src={cwa} alt="Expense Image" />
+              <div className="expense-row-expense-card">
+                <div className="expense-title-expense-card">{expenses.Title}</div>
+                <img className="expense-image-expense-card" src={cwa} alt="Expense Image" />
               </div>
-              <div className="expense-row">
-                <div className="expense-description">
+              <div className="expense-row-expense-card">
+                <div className="expense-description-expense-card">
                   {expenses.description}
                 </div>
               </div>
-              <div className="expense-row">
-                <div className="expense-due-date">Due Date: 2 July 2023</div>
+              <div className="expense-row-expense-card">
+                <div className="expense-due-date-expense-card">Due Date: 2 July 2023</div>
               </div>
-              <div className="expense-row">
-                <div className="expense-alarm">Alarm: 1 July 2023</div>
+              <div className="expense-row-expense-card">
+                <div className="expense-alarm-expense-card">Alarm: 1 July 2023</div>
               </div>
               {/* <div className="expense-row1">
                 <img
@@ -147,7 +147,7 @@ const Expense = ({ setVisible, isExpenseNew, setIsExpenseNew }) => {
         </div>
       </div>
 
-      <div class="addbutton">
+      <div class="addbutton-expense-card">
         <button class="circle-button" onClick={() => setVisible(true)}>
           <i class="fas fa-plus"></i>
         </button>

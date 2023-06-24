@@ -17,7 +17,7 @@ body {
     background-color: #f0faff;
 }
 
-.buttonContinue {
+.buttonContinue-expense-details {
     position: relative;
     padding: 10px 70px;
     border-radius: 6px;
@@ -30,12 +30,12 @@ body {
     /* Added margin-top */
 }
 
-.buttonContinue:active {
+.buttonContinue-expense-details:active {
     transform: scale(0.96);
 }
 
-.buttonContinue:before,
-.buttonContinue:after {
+.buttonContinue-expense-details:before,
+.buttonContinue-expense-details:after {
     position: absolute;
     content: "";
     width: 150%;
@@ -46,7 +46,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.buttonContinue.animate::before {
+.buttonContinue-expense-details.animate::before {
     top: -70%;
     background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
         radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -78,7 +78,7 @@ body {
     }
 }
 
-.buttonContinue.animate::after {
+.buttonContinue-expense-details.animate::after {
     bottom: -70%;
     background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
         radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -109,7 +109,7 @@ body {
     }
 }
 
-.popup-containerM {
+.popup-container-expense-details {
     display: none;
     position: fixed;
     top: 0;
@@ -122,7 +122,7 @@ body {
     align-items: center;
 }
 
-.popup-content {
+.popup-content-expense-details {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -133,7 +133,7 @@ body {
     /* Add position relative */
 }
 
-.popup-content label {
+.popup-content-expense-details label {
     display: block;
     box-sizing: border-box;
     /* tab content must clear this */
@@ -150,19 +150,19 @@ body {
     background: #B9A0FF;;
 }
 
-.popup-title {
-    font-size: 24px;
+.popup-title-expense-details {
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.popup-subtitle {
+.popup-subtitle-expense-details {
     font-size: 18px;
     margin-left: auto;
     color: #2F2F2F;
     font-weight: 500;
 }
 
-.popup-button {
+.popup-button-expense-details {
     background-color: #4caf50;
     color: #fff;
     border: none;
@@ -174,7 +174,7 @@ body {
     /* Added margin-top */
 }
 
-.close-button {
+.close-button-expense-details {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -188,7 +188,7 @@ body {
     cursor: pointer;
 }
 
-.expense-textfield {
+.expense-textfield-expense-details {
     padding: 10px;
     border-color: #B1B1B1;
     border-radius: 5px;
@@ -197,13 +197,13 @@ body {
     margin-top: 5px;
 }
 
-.popup-content label {
+.popup-content-expense-details label {
 
     padding: 0px;
     margin: 5px;
 }
 
-.popup-content input {
+.popup-content-expense-details input {
 
     /* padding: 0px; */
     margin: 0px;

@@ -22,7 +22,7 @@
      background-color: #f0faff;
  }
 
- .buttonContinue {
+ .buttonContinue-saving-details {
      position: relative;
      padding: 10px 62px;
      border-radius: 6px;
@@ -36,12 +36,12 @@
      /* Added margin-top */
  }
 
- .buttonContinue:active {
+ .buttonContinue-saving-details:active {
      transform: scale(0.96);
  }
 
- .buttonContinue:before,
- .buttonContinue:after {
+ .buttonContinue-saving-details:before,
+ .buttonContinue-saving-details:after {
      position: absolute;
      content: "";
      width: 150%;
@@ -52,7 +52,7 @@
      background-repeat: no-repeat;
  }
 
- .buttonContinue.animate::before {
+ .buttonContinue-saving-details.animate::before {
      top: -70%;
      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
          radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -84,7 +84,7 @@
      }
  }
 
- .buttonContinue.animate::after {
+ .buttonContinue-saving-details.animate::after {
      bottom: -70%;
      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
          radial-gradient(circle, #7d2ae8 20%, transparent 20%),
@@ -115,7 +115,7 @@
      }
  }
 
- .popup-container {
+ .popup-container-saving-details {
      display: none;
      position: fixed;
      top: 0;
@@ -128,7 +128,7 @@
      align-items: center;
  }
 
- .popup-content {
+ .popup-content-saving-details {
      background-color: #fff;
      border-radius: 10px;
      padding: 20px;
@@ -139,22 +139,21 @@
      /* Add position relative */
  }
 
- .popup-title {
+ .popup-title-saving-details {
+    font-size: 22px;
      margin-bottom: 10px;
  }
 
- .popup-title {
-     margin-bottom: 10px;
- }
 
- .popup-subtitle {
+
+ .popup-subtitle-saving-details {
      font-size: 18px;
      margin-left: auto;
      color: #2F2F2F;
      font-weight: 500;
  }
 
- .popup-button {
+ .popup-button-saving-details {
      background-color: #4caf50;
      color: #fff;
      border: none;
@@ -166,7 +165,7 @@
      /* Added margin-top */
  }
 
- .close-button {
+ .close-button-saving-details {
      position: absolute;
      top: 10px;
      right: 10px;
@@ -180,7 +179,7 @@
      cursor: pointer;
  }
 
- .expense-textfield {
+ .expense-textfield-saving-details {
      padding: 10px;
      border-color: #B1B1B1;
      border-radius: 5px;
@@ -189,10 +188,10 @@
      margin-top: 5px;
  }
 
- .button-container {
+ .button-container-saving-details {
      display: flex;
  }
 
- .buttonContinue {
+ .buttonContinue-saving-details {
      margin-right: 10px;
  }

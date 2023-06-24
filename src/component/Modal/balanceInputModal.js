@@ -3,6 +3,8 @@ import "../../style/InputModal.css";
 import successSound from "../../music/treasure.mp3";
 import editBtn from "../../img/edit.png";
 
+
+
 const BalanceInputModal = ({ setCount, count }) => {
   const [openSuccess, setOpenSuccess] = useState(false);
   const [balance, setBalance] = useState("");
@@ -52,22 +54,22 @@ const BalanceInputModal = ({ setCount, count }) => {
       <img src={editBtn} alt="Edit" onClick={() => setOpenSuccess(true)} />
 
       <div
-        id="popup-container"
-        class="popup-container"
+        id="popup-container-balance-input-modal"
+        class="popup-container-balance-input-modal"
         style={{ display: openSuccess ? "flex" : "none" }}
       >
-        <div class="popup-content">
-          <div class="close-button" onClick={() => setOpenSuccess(false)}>
+        <div class="popup-content-balance-input-modal">
+          <div class="close-button-balance-input-modal" onClick={() => setOpenSuccess(false)}>
             &#x2716;
           </div>
-          <h2 class="popup-title" style={{ color: "#484848" }}>
+          <h2 class="popup-title-balance-input-modal" style={{ color: "#484848" }}>
             Edit Balance
           </h2>
 
-          <label class="popup-subtitle">Balance</label>
+          <label class="popup-subtitle-balance-input-modal">Balance</label>
           <br />
           <input
-            class="expense-textfield"
+            class="expense-textfield-balance-input-modal"
             type=""
             id="text1"
             value={balance}
@@ -76,10 +78,10 @@ const BalanceInputModal = ({ setCount, count }) => {
           />
           <br />
 
-          <label class="popup-subtitle">Income</label>
+          <label class="popup-subtitle-balance-input-modal">Income</label>
           <br />
           <input
-            class="expense-textfield"
+            class="expense-textfield-balance-input-modal"
             type="text"
             id="text2"
             value={income}
@@ -88,10 +90,10 @@ const BalanceInputModal = ({ setCount, count }) => {
           />
           <br />
 
-          <label class="popup-subtitle">Expense</label>
+          <label class="popup-subtitle-balance-input-modal">Expense</label>
           <br />
           <input
-            class="expense-textfield"
+            class="expense-textfield-balance-input-modal"
             type="text"
             id="text3"
             value={expense}
@@ -101,16 +103,14 @@ const BalanceInputModal = ({ setCount, count }) => {
           <br />
 
           <button
-            class="buttonContinue"
+            class="buttonContinue-balance-input-modal"
             onClick={() => {
               saveDataToLocalStorage();
               retrieveAllDataFromLocalStorage();
               audio.loop = false;
               audio.play();
             }}
-          >
-            Save
-          </button>
+          >Save</button>
 
           {/* <script type="text/javascript">
                     
