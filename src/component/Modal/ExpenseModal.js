@@ -7,6 +7,7 @@ const ExpenseModal = ({ visible, setVisible }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
+  const [count, setCount] = useState(0);
 
   const [items, setItems] = useState([]);
 
@@ -15,7 +16,7 @@ const ExpenseModal = ({ visible, setVisible }) => {
     if (items) {
       setItems(items);
     }
-  }, []);
+  }, [count]);
 
   console.log(items);
 
@@ -36,6 +37,9 @@ const ExpenseModal = ({ visible, setVisible }) => {
 
     localStorage.setItem("Expenses", JSON.stringify(existingData));
     setOpenSuccess(false);
+    setCount(count + 1);
+
+    // localStorage.setItem("Expenses", JSON.stringify([]));
   }
 
   function retrieveAllDataFromLocalStorage() {
@@ -44,19 +48,8 @@ const ExpenseModal = ({ visible, setVisible }) => {
     console.log(Array.isArray(existingData));
   }
 
-  //   button.addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     button.classList.add("animate");
-  //     setTimeout(() => {
-  //       button.classList.remove("animate");
-  //     }, 600);
-  //   });
   return (
     <div>
-      {/* <button onClick={() => setOpenSuccess(true)}>Show Pop-up</button> */}
-      {/* <button class="circle-button" onClick={() => setOpenSuccess(true)}>
-        <i class="fas fa-plus"></i>
-      </button> */}
       <div
         id="popup-containerM"
         class="popup-containerM"

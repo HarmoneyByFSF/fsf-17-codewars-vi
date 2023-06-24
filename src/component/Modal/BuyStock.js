@@ -61,46 +61,6 @@ const BuyStock = ({ visible, setVisible }) => {
             &#x2716;
           </div>
 
-          {/* <h3 class="popup-title" style={{ color: "#484848" }}>
-            Add Saving Goal
-          </h3>
-          <h3 class="popup-title2" style={{ color: "#484848" }}>
-            Title:
-          </h3>
-          <input
-            class="expense-textfield"
-            type="text"
-            id="Quantity"
-            placeholder="Title"
-          />
-          <h3 class="popup-title2" style={{ color: "#484848" }}>
-            Date:
-          </h3>
-          <input
-            class="expense-textfield"
-            type="text"
-            id="Quantity"
-            placeholder="Date"
-          />
-          <h3 class="popup-title2" style={{ color: "#484848" }}>
-            Amount:
-          </h3>
-          <input
-            class="expense-textfield"
-            type="text"
-            id="Quantity"
-            placeholder="Amount"
-          />
-          <h3 class="popup-title2" style={{ color: "#484848" }}>
-            Upload image
-            <img src={link} />
-          </h3>
-
-          <div class="button-container">
-            <button class="buttonContinue">
-              <h5 style={{ color: "white" }}>Add savings</h5>
-            </button>
-          </div> */}
           <img src={rogers} />
 
           <h3 class="popup-title" style={{ color: "#484848" }}>
