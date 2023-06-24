@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div>
-      <AppBar position="static" sx={{ backgroundColor: '#C1ADFA', height: '60px' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#C1ADFA', height: '110px' ,paddingTop:'50px'}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
