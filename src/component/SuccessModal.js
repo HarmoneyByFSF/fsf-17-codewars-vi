@@ -4,7 +4,7 @@ import target from "../img/target.png";
 import coin from "../img/dollar_coin.png";
 import Confetti from "react-confetti";
 
-const SuccessModal = () => {
+const SuccessModal = ({ openSuccessSave, setOpenSuccessSave }) => {
   const [openSuccess, setOpenSuccess] = useState(false);
 
   const audio = new Audio(successSound);
@@ -13,7 +13,7 @@ const SuccessModal = () => {
 
   return (
     <div>
-      <button
+      {/* <button
         onClick={() => {
           audio.loop = false;
           audio.play();
@@ -21,37 +21,40 @@ const SuccessModal = () => {
         }}
       >
         Show Pop-up
-      </button>
+      </button> */}
 
       <div
         id="popup-container"
         className="popup-container"
-        style={{ display: openSuccess ? "flex" : "none" }}
+        style={{ display: openSuccessSave ? "flex" : "none" }}
       >
         <Confetti width={width} height={height} />
 
         <div className="popup-content">
-          <div className="close-button" onClick={() => setOpenSuccess(false)}>
+          <div
+            className="close-button"
+            onClick={() => setOpenSuccessSave(false)}
+          >
             &#x2716;
           </div>
           <h2 className="popup-title" style={{ color: "#484848" }}>
-            Course Completed
+            New Goal added
           </h2>
 
           <img className="popup-image" src={target} />
           <p className="popup-subtitle" style={{ color: "#9D9D9D" }}>
-            You completed the basic of Insurance
+            You need to save money!
           </p>
 
           <div className="popup-price">
             <img className="dollar-image" src={coin} />
-            <p style={{ margin: 0 }}>15 Tokens</p>
+            <p style={{ margin: 0 }}>5 Tokens</p>
           </div>
 
           <button
             className="buttonContinue"
             onClick={() => {
-              setOpenSuccess(false);
+              setOpenSuccessSave(false);
             }}
           >
             Continue

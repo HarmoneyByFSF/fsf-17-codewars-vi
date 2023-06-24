@@ -23,7 +23,7 @@ function App() {
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [balanceCoin, setBalanceCoin] = useState({ amount: 0 });
+  const [balanceCoin, setBalanceCoin] = useState({ amount: 250 });
   const [isCoinNew, setCoinNew] = useState(0);
 
   const handleOpenNavMenu = (event) => {
@@ -46,8 +46,8 @@ function App() {
     if (items) {
       setBalanceCoin(items);
     } else {
-      setBalanceCoin({ amount: 0 });
-      localStorage.setItem("BalanceCoin", JSON.stringify({ amount: 0 }));
+      setBalanceCoin({ amount: 250 });
+      localStorage.setItem("BalanceCoin", JSON.stringify({ amount: 250 }));
     }
     console.log(items);
   }, [isCoinNew]);

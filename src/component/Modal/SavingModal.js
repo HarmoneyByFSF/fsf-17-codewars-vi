@@ -3,7 +3,14 @@ import "../../style/SavingModal.css";
 import successSound from "../../music/treasure.mp3";
 import link from "../../img/link_02.png";
 
-const SavingModal = ({ visible, setVisible, isSavingNew, setIsSavingNew }) => {
+const SavingModal = ({
+  visible,
+  setVisible,
+  isSavingNew,
+  setIsSavingNew,
+  openSuccessSave,
+  setOpenSuccessSave,
+}) => {
   const [openSuccess, setOpenSuccess] = useState(false);
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
@@ -32,6 +39,7 @@ const SavingModal = ({ visible, setVisible, isSavingNew, setIsSavingNew }) => {
     setVisible(false);
 
     setOpenSuccess(false);
+    setOpenSuccessSave(true);
   }
 
   return (
