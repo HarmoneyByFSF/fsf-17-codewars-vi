@@ -145,13 +145,7 @@ function App() {
   <Tooltip title="Open settings">
     {/* Replace the IconButton with three FSC images */}
     
-    <div style={{ position: 'relative', display: 'inline-block' }}>
-      
-  <img src={coin_count} alt="coin count" style={{ marginRight: '15px', paddingTop:'1px' }} />
-  <div style={{ position: 'absolute', top: '60%', left: '55%', transform: 'translate(-50%, -50%)' }}>
-    <p style={{ color: 'white', fontSize: '15px', fontWeight: 'bold' }}>34</p>
-  </div>
-</div>
+    
 
                 <div style={{ position: "relative", display: "inline-block" }}>
                   <img
